@@ -8,8 +8,8 @@ url: "https://lahoffman/lahoffman.github.io"
 # THEME-SPECIFIC CONFIGURATION
 title: Lauren Hoffman                                    # site's title
 description: "Oceanographer"      # used by search engines
-avatar: assets/img/icon.png                         # Empty for no avatar in navbar
-favicon: assets/img/icon.png                            # Icon displayed in the tab
+avatar: assets/img/icon_nn.png                         # Empty for no avatar in navbar
+favicon: assets/img/icon_nn.png                            # Icon displayed in the tab
 
 # Header and footer text
 header_text: Change <code>header_text</code> in <code>_config.yml</code>  # Change Blog header text
