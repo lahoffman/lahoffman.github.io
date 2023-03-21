@@ -8,7 +8,7 @@ url: "https://lahoffman/lahoffman.github.io"
 # THEME-SPECIFIC CONFIGURATION
 title: Lauren Hoffman                                    # site's title
 description: "Oceanographer"      # used by search engines
-avatar: assets/img/icon_nn_white.png                         # Empty for no avatar in navbar
+avatar: assets/img/icon_nn.png                         # Empty for no avatar in navbar
 favicon: assets/img/icon_nn.png                            # Icon displayed in the tab
 
 # Header and footer text
