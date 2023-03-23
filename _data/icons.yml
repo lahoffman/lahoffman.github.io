@@ -6,9 +6,9 @@ calendly:
 dribbble:
 facebook:
 flickr:
-github: https://github.com/lahoffman
+github: lahoffman
 gitlab:
-google-scholar:   https://scholar.google.com/citations?user=xLPpezUAAAAJ&hl=en # e.g. "WXAAOb0AAAAJ"
+google-scholar:    # e.g. "WXAAOb0AAAAJ"
 instagram:
 hacker-news:
 keybase:
