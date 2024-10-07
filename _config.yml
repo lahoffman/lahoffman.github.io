@@ -7,7 +7,7 @@ url: "https://lahoffman/lahoffman.github.io"
 
 # THEME-SPECIFIC CONFIGURATION
 title: Lauren Hoffman                                    # site's title
-description: "Oceanographer"      # used by search engines
+description: "ML Climate Scientist"      # used by search engines
 avatar: assets/img/nn_icon.png                         # Empty for no avatar in navbar
 favicon: assets/img/nn_icon.png                            # Icon displayed in the tabs
 
