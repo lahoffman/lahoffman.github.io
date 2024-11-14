@@ -13,22 +13,16 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Alex Hernandez-Garcia
-tagline: Machine learning and computational neuroscience
-email: alex.hernandez-garcia@mila.quebec
-twitter_username: alexhdezgcia
-github_username:  alexhernandezgarcia
-twitter:
-  - username: alexhdezgcia
-description: Alex Hernandez-Garcia is an incoming assistant professor at the Université de Montréal at [DIRO](https://diro.umontreal.ca) and [Mila](https://mila.quebec). He is interested in the fundamental aspects of learning, in both brains and machines, as well as in applications of machine learning for social good, like tackling climate change and health challenges.
+title: Personal Website
+tagline: A template for a personal website
+email: firstname.lastname@e.email
+description: A template for a personal website, tailored for academics.
 author: Alex Hernandez-Garcia
 url: https://alexhernandezgarcia.github.io
-logo: /assets/images/logo1.png
 
 # Reading Files
 include:
   - _pages
-  - _posters
 
 # Collections
 collections:
