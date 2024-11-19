@@ -2,6 +2,7 @@
 layout: home
 title: Home
 image: /assets/images/home.png
+show_news: true
 ---
 Lorem ipsum dolor sit amet. 
 
