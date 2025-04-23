@@ -1,8 +1,10 @@
 - name: Publications
   link: /publications.html
-- name: Projects
-  link: /projects.html
-- name: Blog
-  link: /blog.html
-- name: About me
-  link: /about.html
+- name: Research
+  link: /research.html
+- name: Teaching
+  link: /teaching.html
+- name: Presentations
+  link: /presentations.html
+- name: CV
+  link: /cv.html
