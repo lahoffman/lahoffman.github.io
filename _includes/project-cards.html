@@ -7,7 +7,29 @@
     {% for section in project.sections %}
     <details class="mb-1">
       <summary class="cursor-pointer font-medium">{{ section.name }}</summary>
-      <p class="text-sm mt-1">{{ section.content }}</p>
+
+      {% assign color_class = "bg-sky-100 text-sky-800" %}
+      {% if section.name == "Talks" %}
+        {% assign color_class = "bg-green-100 text-green-800" %}
+      {% elsif section.name == "Publications" %}
+        {% assign color_class = "bg-purple-100 text-purple-800" %}
+      {% endif %}
+
+      {% assign lines = section.content | newline_to_br | split: "<br />" %}
+      <div class="flex flex-wrap gap-2 mt-2">
+        {% for line in lines %}
+          {% if line contains "[" and line contains "](" %}
+            {% assign label = line | remove: "[" | split: "](" %}
+            {% assign text = label[0] %}
+            {% assign url = label[1] | remove: ")" %}
+            <a href="{{ url | strip }}" target="_blank" rel="noopener" class="text-xs {{ color_class }} px-2 py-1 rounded hover:opacity-90">
+              {{ text | strip }}
+            </a>
+          {% else %}
+            <p class="text-sm">{{ line }}</p>
+          {% endif %}
+        {% endfor %}
+      </div>
     </details>
     {% endfor %}
 
@@ -17,6 +39,7 @@
 
     <img src="{{ project.image }}" alt="{{ project.title }} image" class="w-full mt-4 rounded shadow-sm">
 
+    {% if project.links %}
     <div class="flex flex-wrap gap-2 mt-4">
       {% for link in project.links %}
         <a href="{{ link.url }}" class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded hover:bg-gray-200 {% if link.style == 'pink' %}bg-pink-100 text-pink-800{% endif %}">
@@ -24,20 +47,7 @@
         </a>
       {% endfor %}
     </div>
+    {% endif %}
   </div>
   {% endfor %}
 </div>
-
-{% for section in item.sections %}
-  <h4>{{ section.name }}</h4>
-  {% if section.content %}
-    <p>{{ section.content }}</p>
-  {% endif %}
-  {% if section.links %}
-    <div class="button-group">
-      {% for link in section.links %}
-        <a class="btn btn-sm" href="{{ link.url }}" target="_blank">{{ link.label }}</a>
-      {% endfor %}
-    </div>
-  {% endif %}
-{% endfor %}
