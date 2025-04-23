@@ -13,12 +13,9 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Personal Website
-tagline: A template for a personal website
-email: firstname.lastname@e.email
-description: A template for a personal website, tailored for academics.
-author: Alex Hernandez-Garcia
-url: https://alexhernandezgarcia.github.io
+title: Lauren Hoffman
+email: lauren.hoffman@uclouvain.be
+url: https://lahoffman.github.io
 
 # Reading Files
 include:
