@@ -14,16 +14,16 @@
 <br>
 
 <p><H4>Upcoming</H4></p>
- <li> Earth Science Information Partners (ESIP) Machine Learning Cluster Meeting. Virtual. 2025. Oral Presentation. <i>Invited.</i> </li>
-
+ <li> American Meteorological Society Denver Summit, 18th Conference on Polar Meteorology and Oceanography. 2025.
+Denver, CO. Oral presentation.</li>
 <br>
 <hr>
 <br>
 
 <p><H4>Presentation Links</H4></p>
-<p> <a href="https://ecco-group.org/docs/ecco_annual_mtg23_day2_05_hoffman.pdf" target = "_blank"> Machine learning is a useful surrogate model to parameterize and understand sea-ice motion in the Arctic. ECCO Annual Meeting 2023, Pasadena, CA. </a></p>
-<p> <a href="https://youtu.be/idXsZn3mftE" target = "_blank"> Ocean Surface Salinity Response to Atmospheric River (AR) Events in the California Current System. NASA Ocean Salinity Conference, New York, NY, 2022. </a> </p>
-<p> <a href="https://youtu.be/BfF_DkMtN0I" target = "_blank"> Machine learning for evaluating the drivers of variability in Arctic sea-ice dynamics to improve forecasting. Ocean Sciences Meeting 2022, Virtual. </a> </p>
+<p> <a href="https://ecco-group.org/docs/ecco_annual_mtg23_day2_05_hoffman.pdf" target = "_blank"> Machine learning is a useful surrogate model to parameterize and understand sea-ice motion in the Arctic. ECCO Annual Meeting 2023. Pasadena, CA. </a></p>
+<p> <a href="https://youtu.be/idXsZn3mftE" target = "_blank"> Ocean Surface Salinity Response to Atmospheric River (AR) Events in the California Current System. NASA Ocean Salinity Conference. New York, NY. 2022. </a> </p>
+<p> <a href="https://youtu.be/BfF_DkMtN0I" target = "_blank"> Machine learning for evaluating the drivers of variability in Arctic sea-ice dynamics to improve forecasting. Ocean Sciences Meeting 2022. Virtual. </a> </p>
 
 <br>
 <hr>
@@ -31,7 +31,7 @@
 <p><H4>Invited Talks</H4></p>
 <li> Earth Science Information Partners (ESIP) Machine Learning Cluster Meeting. Virtual. 2025. Oral Presentation. <i>Invited.</i> </li>
 <li> Interagency Arctic Research Policy Committee (IARPC) Modelers' Community of Practice March 2024 Meeting - Combining Modeling and Machine Learning Approaches to Understanding the Arctic Earth System. Virtual. Oral Presentation. <i>Invited.</i></li>
-<li> AI for the Study of Environmental Risk (AI4ER) Seminar Series, University of Cambridge, 2023. Cambridge, UK. <i>Invited.</i> </li>
+<li> AI for the Study of Environmental Risk (AI4ER) Seminar Series, University of Cambridge. 2023. Cambridge, UK. <i>Invited.</i> </li>
 <li> American Meteorological Society Collective Madison Meeting, 17th Conference on Polar Meteorology and Oceanography 2022.
 Madison, WI. Oral presentation. <i>Invited.</i></li>
 <li> NOAA Science Seminar Series 2022. Virtual. Oral presentation. <i>Invited.</i></li>
