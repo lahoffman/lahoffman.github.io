@@ -13,7 +13,7 @@ permalink: /cv
 <br>
 <hr>
 <br>
-<p><b>Universiti&eacute Catholique de Louvain,</b> Earth and Life Institute (ELI) | Earth and Climate (ELIC) (present)</p>
+<p><b>Université Catholique de Louvain,</b> Earth and Life Institute (ELI) | Earth and Climate (ELIC) (present)</p>
 <p><i>Machine learning as a tool to predict and understand rapid Arctic sea ice loss events for ArcticWATCH</i></p>
 <br>
 <hr>
