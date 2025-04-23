@@ -1,3 +1,10 @@
+---
+layout: page
+title: Presentations
+permalink: /presentations
+---
+
+
 <style type="text/css">
 .centerImage
 {
