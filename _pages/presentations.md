@@ -7,7 +7,7 @@
 </style>
 
   <div>
-      <img src="assets/img/poster_MLice.jpeg" class="centerImage" width="900">
+      <img src="assets/images/poster_MLice.jpeg" class="centerImage" width="900">
     </div>
 <br>
 <hr>
