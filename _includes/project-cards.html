@@ -1,56 +1,27 @@
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="grid">
   {% for project in site.data.projects %}
-  <div class="bg-white shadow rounded-lg p-4">
-    <h2 class="text-xl font-semibold">{{ project.title }}</h2>
-    <p class="text-gray-600 mb-2">{{ project.subtitle }}</p>
+  <div class="project-card">
+    <h2 class="project-title">{{ project.title }}</h2>
+    <p class="project-subtitle">{{ project.subtitle }}</p>
 
     {% for section in project.sections %}
-    <details class="mb-1">
-      <summary class="cursor-pointer font-medium">{{ section.name }}</summary>
-
-      {% assign color_class = "bg-sky-100 text-sky-800" %}
-      {% if section.name == "Talks" %}
-        {% assign color_class = "bg-green-100 text-green-800" %}
-      {% elsif section.name == "Publications" %}
-        {% assign color_class = "bg-purple-100 text-purple-800" %}
-      {% endif %}
+    <details class="section-details">
+      <summary>{{ section.name }}</summary>
 
       {% assign lines = section.content | newline_to_br | split: "<br />" %}
-      <div class="flex flex-wrap gap-2 mt-2">
+      <div class="section-content">
         {% for line in lines %}
-          {% if line contains "[" and line contains "](" %}
-            {% assign line_clean = line | remove: '-' %} 
-            {% assign label = line | remove: "[" | split: "](" %}
-            {% assign text = label[0] %}
-            {% assign url = label[1] | remove: ")" %}
-            <a href="{{ url | strip }}" target="_blank" rel="noopener" class="btn">
-              {{ text | strip }}
-            </a>
-          {% else %}
-            <span class="btn bg-gray-300 text-gray-600 cursor-default">
-              {{ line | remove: '-' | remove: '[' | remove: ']' }} 
-            </span>
-          {% endif %}
+        <span class="section-line">
+          {{ line | remove: '-' | remove: '[' | remove: ']' }}
+        </span>
         {% endfor %}
       </div>
     </details>
     {% endfor %}
 
-    <a href="{{ project.read_more_url }}" class="block bg-emerald-700 text-white text-center py-2 rounded-md mt-3 hover:bg-emerald-800 transition duration-300">
-      Read more
-    </a>
+    <a href="{{ project.read_more_url }}" class="read-more-button">Read more</a>
 
-    <img src="{{ project.image }}" alt="{{ project.title }} image" class="w-full mt-4 rounded shadow-sm">
-
-    {% if project.links %}
-    <div class="flex flex-wrap gap-2 mt-4">
-      {% for link in project.links %}
-        <a href="{{ link.url }}" class="text-xs bg-gray-100 text-gray-800 px-3 py-2 rounded-md hover:bg-gray-200 hover:shadow-md transition duration-300 {% if link.style == 'pink' %}bg-pink-100 text-pink-800{% endif %}">
-          {{ link.label }}
-        </a>
-      {% endfor %}
-    </div>
-    {% endif %}
+    <img src="{{ project.image }}" alt="{{ project.title }} image" class="project-image">
   </div>
   {% endfor %}
 </div>
