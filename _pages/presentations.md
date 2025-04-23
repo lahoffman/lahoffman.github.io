@@ -36,12 +36,12 @@ Denver, CO. Oral presentation.</li>
 <hr>
 <br>
 <p><H4>Invited Talks</H4></p>
-<li> Earth Science Information Partners (ESIP) Machine Learning Cluster Meeting. Virtual. 2025. Oral Presentation. <i>Invited.</i> </li>
-<li> Interagency Arctic Research Policy Committee (IARPC) Modelers' Community of Practice March 2024 Meeting - Combining Modeling and Machine Learning Approaches to Understanding the Arctic Earth System. Virtual. Oral Presentation. <i>Invited.</i></li>
-<li> AI for the Study of Environmental Risk (AI4ER) Seminar Series, University of Cambridge. 2023. Cambridge, UK. <i>Invited.</i> </li>
-<li> American Meteorological Society Collective Madison Meeting, 17th Conference on Polar Meteorology and Oceanography 2022.
+ <li> Earth Science Information Partners (ESIP) Machine Learning Cluster Meeting. Virtual. 2025. Oral Presentation. <i>Invited.</i> </li>
+ <li> Interagency Arctic Research Policy Committee (IARPC) Modelers' Community of Practice March 2024 Meeting - Combining Modeling and Machine Learning Approaches to Understanding the Arctic Earth System. Virtual. Oral Presentation. <i>Invited.</i></li>
+ <li> AI for the Study of Environmental Risk (AI4ER) Seminar Series, University of Cambridge. 2023. Cambridge, UK. <i>Invited.</i> </li>
+ <li> American Meteorological Society Collective Madison Meeting, 17th Conference on Polar Meteorology and Oceanography 2022.
 Madison, WI. Oral presentation. <i>Invited.</i></li>
-<li> NOAA Science Seminar Series 2022. Virtual. Oral presentation. <i>Invited.</i></li>
+ <li> NOAA Science Seminar Series 2022. Virtual. Oral presentation. <i>Invited.</i></li>
 
 
 <p><H4>Conferences, Meetings, and Seminars</H4></p>
@@ -55,7 +55,7 @@ Madison, WI. Oral presentation. <i>Invited.</i></li>
   <li> Atmospheric and Ocean Sciences Forum, University of Colorado Boulder, 2023. Boulder, CO. Seminar.</li>
   <li> Scientific Machine Learning Symposium 2023. San Diego, CA. Poster.</li>
   <li> ECCO Annual Meeting 2023. Pasadena, CA. Oral presentation.</li>
-  <li> 9th Annual FIRO Workshop. San Diego, CA. Poster. <i>Invited.</i></li>
+  <li> 9th Annual FIRO Workshop. San Diego, CA. Poster.</li>
   <li> Observing, Modeling, and Understanding the Circulation of the Arctic Ocean and Sub-Arctic Seas Workshop 2022. Seattle, WA.
 Poster.</li>
   <li> Center for Western Weather Water Extremes (CW3E) Annual Meeting 2022. San Diego, CA. Poster.</li>
