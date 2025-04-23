@@ -6,7 +6,7 @@
       url: https://arcticwatch-erc.github.io
   sections:
     - name: Contributors
-      content: "François Massonnet, Patricia DeRepentigny, Alison Delhasse, Annelies Sticker."
+      content: "François Massonnet", "Patricia DeRepentigny","Alison Delhasse", "Annelies Sticker"
     - name: Talks
       content: |
         - [Upcoming: Polar AMS 2025](https://ams.confex.com/ams/2025Summit/meetingapp.cgi/Paper/459816)
