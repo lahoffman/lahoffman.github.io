@@ -5,7 +5,7 @@ image: /assets/images/profile.jpg
 show_news: false
 ---
 
-I am currently a postdoctoral researcher at Universit&eacute Catholique de Louvain in Louvain-la-Neuve, Belgium.
+I am currently a postdoctoral researcher at Université Catholique de Louvain in Louvain-la-Neuve, Belgium.
 
 
 #### Current Reserarch
