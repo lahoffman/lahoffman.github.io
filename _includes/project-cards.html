@@ -26,7 +26,9 @@
               {{ text | strip }}
             </a>
           {% else %}
-            <p class="text-sm">{{ line }}</p>
+            <span class="btn bg-gray-300 text-gray-600 cursor-default">
+              {{ line }}
+            </span>
           {% endif %}
         {% endfor %}
       </div>
