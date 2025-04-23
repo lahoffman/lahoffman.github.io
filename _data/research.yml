@@ -1,0 +1,70 @@
+- title: ArcticWATCH
+  subtitle: Early Warning of Future Rapid Arctic Sea Ice Loss
+  image: /assets/images/arcticwatchwheel.png
+  links:
+    - label: Website
+      url: https://arcticwatch-erc.github.io
+  sections:
+    - name: Contributors
+      content: "François Massonnet, Patricia DeRepentigny, Alison Delhasse, Annelies Sticker."
+    - name: Talks
+      content: |
+        - [Upcoming: Polar AMS 2025](https://ams.confex.com/ams/2025Summit/meetingapp.cgi/Paper/459816)
+        - [Poster at ICTP Workshop on Polar Climate](https://indico.ictp.it/event/10611/)
+  read_more_url: /arcticwatch/
+  status: in-progress
+
+- title: ArcticMotionXAI
+  subtitle: Using XAI to understand Arctic sea ice motion forecasts
+  image: /assets/images/sivforecastsxai.png
+  sections:
+    - name: Contributors
+      content: "Matthew Mazloff, Sarah Gille, Donata Giglio, Patrick Heimbach"
+    - name: Publications
+      content: |
+        - [AIES](https://doi.org/10.1175/AIES-D-24-0027.1)
+    - name: Talks
+      content: |
+        - [IARPC Modelers 2024](https://www.iarpccollaborations.org/events/25028)
+        - [Liege Colloquium](https://ocean-colloquium.fsc.uliege.be/PresentationManager/colloquium/2023/abstracts/2023-04-18_01:04:10_IP_137.110.40.111.pdf)
+        - [AI4ER Seminar 2023]
+        - [ATOC Seminar 2023]
+        - [Scientific ML Symposium 2023](https://rose-stl-lab.github.io/scientific-ml-symposium/)
+  read_more_url: /arcticmotionxai/
+  
+- title: ArcticSIV
+  subtitle: Machine learning forecasts of Arctic sea ice motion
+  image: /assets/images/sivforecasts.png
+  links:
+    - label: Website
+      url: https://sose.ucsd.edu/forecasts/ArcticIceMotion/
+  sections:
+    - name: Contributors
+      content: "Matthew Mazloff, Sarah Gille, Donata Giglio, Patrick Heimbach, Cecilia Bitz, Kayli Matsuyoshi"
+    - name: Publications
+      content: |
+        - [AIES](https://doi.org/10.1175/AIES-D-23-0004.1)
+    - name: Talks
+      content: |
+        - [ECCO 2022](https://ecco-group.org/docs/ecco_annual_mtg23_day2_05_hoffman.pdf)
+        - [OSM 2022](https://www.youtube.com/watch?v=BfF_DkMtN0I)
+        - [Polar AMS 2022](https://ams.confex.com/ams/CMM2022/meetingapp.cgi/Paper/405464)
+  read_more_url: /arcticsivforecasts/
+
+  - title: AROcean
+  subtitle: Understanding the ocean salinity signature of atmospheric rivers in the California Current System
+  image: /assets/images/arocean.png
+  sections:
+    - name: Contributors
+      content: "Matthew Mazloff, Sarah Gille, Donata Giglio, Aniruddh Varadarajan"
+    - name: Publications
+      content: |
+        - [JPO](https://doi.org/10.1175/JPO-D-21-0272.1)
+    - name: Talks
+      content: |
+        - [FIRO 2022](https://cw3e.ucsd.edu/firo_workshop_2022/)
+        - [CW3E Annual Meeting 2022]
+        - [NOAA Science Seminar 2022](https://www.star.nesdis.noaa.gov/star/NOAAScienceSeminars_2022.php)
+        - [NASA Ocean Salinity 2022](https://salinity.oceansciences.org/ocean-salinity-conference-2022.cgi)
+        - [AMS101 2021](https://ams.confex.com/ams/101ANNUAL/meetingapp.cgi/Paper/382369)
+  read_more_url: /arocean/
