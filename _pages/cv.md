@@ -1,3 +1,10 @@
+---
+layout: page
+title: CV
+permalink: /cv
+---
+
+
 <br>
 <hr>
 <hr>
