@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Spectral&display=swap');
 
 body {
-  font-family: 'Spectral', serif;
-  background-color: #f0f0f0; /* light background */
-  color: #222; /* Dark color for text for contrast */
+  font-family: 'Spectral', serif !important;
+  background-color: #f0f0f0 !important; /* light background */
+  color: #222 !important; /* Dark color for text for contrast */
 }
 
 h1, h2, h3, h4, h5, h6 {
