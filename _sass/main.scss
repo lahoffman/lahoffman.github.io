@@ -21,8 +21,21 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 5px;
   text-decoration: none;
 }
+
 .btn:hover {
-  background-color: #0056b3;
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.bg-sky-100 {
+  background-color: #e0f7fa; /* Sky color */
+}
+
+.bg-green-100 {
+  background-color: #c8e6c9; /* Green color */
+}
+
+.bg-purple-100 {
+  background-color: #e1bee7; /* Purple color */
 }
 
 .current {
