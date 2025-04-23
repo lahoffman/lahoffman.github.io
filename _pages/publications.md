@@ -3,10 +3,7 @@ layout: page
 title: Publications
 permalink: /publications
 ---
-{% assign publications = site.data.publications | sort: 'year' | reverse %}
-{% for item in site.data.publications %}
-  {% include publication-item.html %}
-{% endfor %}
+
 
 <p> Hoffman, L., Mazloff, M. R., Gille, S. T., Giglio, D., Heimbach, P. (2024, <i>in prep</i>). Machine learning for evaluating trends in the
 drivers of variability in Arctic sea-ice dynamics. </a>
@@ -14,15 +11,4 @@ drivers of variability in Arctic sea-ice dynamics. </a>
 <p> Hoffman, L., Mazloff, M. R., Gille, S. T., Giglio, D., Bitz, C. M., Heimbach, P., Matsuyoshi, K. (2023). <a href="https://doi.org/10.1175/AIES-D-23-0004.1" target = "_blank"> Machine learning for daily forecasts of Arctic sea-ice motion: an attribution assessment of model predictive skill. </a>
 <p> Hoffman, L., Mazloff, M. R., Gille, S. T., Giglio, D., Varadarajan, A. (2022). <a href="https://doi.org/10.1175/JPO-D-21-0272.1" target = "_blank"> Ocean Surface Salinity Response to Atmospheric River Precipitation in the California Current System. </a>
 
-## Talks
-{% assign talks = site.data.talks | sort: 'year' | reverse %}
-{% for item in talks %}
-  {% include talk-item.html %}
-{% endfor %}
 
-## In the media
-{% assign media = site.data.media | sort: 'date' | reverse %}
-{% for item in media %}
-  {% include media-item.html %}
-{% endfor %}
-  
