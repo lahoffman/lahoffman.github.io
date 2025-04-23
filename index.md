@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Home
-image: /assets/images/profile.png
+image: /assets/images/profile.jpg
 show_news: false
 ---
 
