@@ -27,3 +27,17 @@
   </div>
   {% endfor %}
 </div>
+
+{% for section in item.sections %}
+  <h4>{{ section.name }}</h4>
+  {% if section.content %}
+    <p>{{ section.content }}</p>
+  {% endif %}
+  {% if section.links %}
+    <div class="button-group">
+      {% for link in section.links %}
+        <a class="btn btn-sm" href="{{ link.url }}" target="_blank">{{ link.label }}</a>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endfor %}
