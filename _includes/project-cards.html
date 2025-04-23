@@ -22,7 +22,7 @@
             {% assign label = line | remove: "[" | split: "](" %}
             {% assign text = label[0] %}
             {% assign url = label[1] | remove: ")" %}
-            <a href="{{ url | strip }}" target="_blank" rel="noopener" class="text-xs {{ color_class }} px-2 py-1 rounded hover:opacity-90">
+            <a href="{{ url | strip }}" target="_blank" rel="noopener" class="text-xs {{ color_class }} px-3 py-1 rounded-md hover:bg-opacity-90 hover:shadow-sm transition duration-300">
               {{ text | strip }}
             </a>
           {% else %}
@@ -33,7 +33,7 @@
     </details>
     {% endfor %}
 
-    <a href="{{ project.read_more_url }}" class="block bg-emerald-700 text-white text-center py-2 rounded mt-3 hover:bg-emerald-800">
+    <a href="{{ project.read_more_url }}" class="block bg-emerald-700 text-white text-center py-2 rounded-md mt-3 hover:bg-emerald-800 transition duration-300">
       Read more
     </a>
 
@@ -42,7 +42,7 @@
     {% if project.links %}
     <div class="flex flex-wrap gap-2 mt-4">
       {% for link in project.links %}
-        <a href="{{ link.url }}" class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded hover:bg-gray-200 {% if link.style == 'pink' %}bg-pink-100 text-pink-800{% endif %}">
+        <a href="{{ link.url }}" class="text-xs bg-gray-100 text-gray-800 px-3 py-2 rounded-md hover:bg-gray-200 hover:shadow-md transition duration-300 {% if link.style == 'pink' %}bg-pink-100 text-pink-800{% endif %}">
           {{ link.label }}
         </a>
       {% endfor %}
