@@ -4,11 +4,18 @@
 body {
   font-family: 'Spectral', serif;
   background-color: #f0f0f0; /* light background */
-  color: #333; /* Dark color for text for contrast */
+  color: #222; /* Dark color for text for contrast */
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Spectral', serif; /* Ensure headers use the Spectral font */
+}
+
+nav {
+  background-color: #f0f0f0; /* Light background for navigation */
+  width: 100%; /* Ensure the navigation bar covers the entire width */
+  padding: 15px 0; /* Padding for better appearance */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for some depth */
 }
 
 .btn {
