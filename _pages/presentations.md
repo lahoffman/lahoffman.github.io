@@ -27,20 +27,23 @@ permalink: /presentations
 <br>
 
 <p><H4>Invited Talks</H4></p>
-<li> Earth Science Information Partners (ESIP) Machine Learning Cluster Meeting. Virtual. 2025. Oral Presentation. <i>Invited.</i> </li>
-<li> Interagency Arctic Research Policy Committee (IARPC) Modelers' Community of Practice March 2024 Meeting - Combining Modeling and Machine Learning Approaches to Understanding the Arctic Earth System. Virtual. Oral Presentation. <i>Invited.</i></li>
-<li> AI for the Study of Environmental Risk (AI4ER) Seminar Series, University of Cambridge. 2023. Cambridge, UK. <i>Invited.</i> </li>
+<ul>
+<li> Earth Science Information Partners (ESIP) Machine Learning Cluster Meeting. Virtual. 2025. Oral Presentation. </li>
+<li> Interagency Arctic Research Policy Committee (IARPC) Modelers' Community of Practice March 2024 Meeting - Combining Modeling and Machine Learning Approaches to Understanding the Arctic Earth System. Virtual. Oral Presentation. </li>
+<li> AI for the Study of Environmental Risk (AI4ER) Seminar Series, University of Cambridge. 2023. Cambridge, UK. </li>
 <li> American Meteorological Society Collective Madison Meeting, 17th Conference on Polar Meteorology and Oceanography 2022.
-Madison, WI. Oral presentation. <i>Invited.</i></li>
-<li> NOAA Science Seminar Series 2022. Virtual. Oral presentation. <i>Invited.</i></li>
+Madison, WI. Oral presentation.</li>
+<li> NOAA Science Seminar Series 2022. Virtual. Oral presentation. </li>
+</ul>
 <br>
 <hr>
 <br>
 
 <p><H4>Guest Lectures</H4></p>
+<ul>
  <li> Introduction to Machine Learning for Earth and Climate Science. <i>Forecast, Prediction, and Projection in Climate Science.</i> UCLouvain. Winter 2025 </li>
  <li> Introduction to Machine Learning for Earth and Climate Science. <i>Analysis of Physical Oceanographic Data Course.</i>i> Scripps Institution of Oceanography, Winter 2023.</li>
-
+</ul>
 <br>
 <hr>
 <br>
