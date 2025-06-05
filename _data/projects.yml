@@ -18,6 +18,22 @@
   read_more_url: /arcticwatch/
   status: in-progress
 
+  - title: AI4InSync
+  subtitle: Optimizing Southern Ocean observing systems using AI.
+  image: /assets/images/ai4insynclogo.png
+  links:
+    - label: Website
+      url: https://ai4insync.github.io
+  sections:
+    - name: Contributors
+      content: |
+        - François Massonnet
+    - name: Talks
+      content: |
+        - [KITP Polar 2025](https://www.kitp.ucsb.edu/activities/polar25)
+  read_more_url: /ai4insync/
+  status: in-progress
+
 - title: ArcticMotionXAI
   subtitle: Using XAI to understand Arctic sea ice motion forecasts
   image: /assets/images/sivforecastsxai.png
