@@ -13,7 +13,7 @@
         - Annelies Sticker
     - name: Talks
       content: |
-        - [Upcoming: Polar AMS 2025](https://ams.confex.com/ams/2025Summit/meetingapp.cgi/Paper/459816)
+        - [Polar AMS 2025](https://ams.confex.com/ams/2025Summit/meetingapp.cgi/Paper/459816)
         - [Poster at ICTP Workshop on Polar Climate](https://indico.ictp.it/event/10611/)
   read_more_url: /arcticwatch/
   status: in-progress
@@ -30,14 +30,14 @@
         - Patrick Heimbach
     - name: Publications
       content: |
-        - [AIES](https://doi.org/10.1175/AIES-D-24-0027.1)
+        - [AIES](https://journals.ametsoc.org/view/journals/aies/4/1/AIES-D-24-0027.1.xml)
     - name: Talks
       content: |
         - [IARPC Modelers 2024](https://www.iarpccollaborations.org/events/25028)
-        - [Liege Colloquium](https://ocean-colloquium.fsc.uliege.be/PresentationManager/colloquium/2023/abstracts/2023-04-18_01:04:10_IP_137.110.40.111.pdf)
+        - [Liege Colloquium]
         - [AI4ER Seminar 2023]
         - [ATOC Seminar 2023]
-        - [Scientific ML Symposium 2023](https://rose-stl-lab.github.io/scientific-ml-symposium/)
+        - [Scientific ML Symposium 2023]
   read_more_url: /arcticmotionxai/
   
 - title: ArcticSIV
