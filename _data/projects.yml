@@ -23,7 +23,11 @@
   image: /assets/images/sivforecastsxai.png
   sections:
     - name: Contributors
-      content: "Matthew Mazloff, Sarah Gille, Donata Giglio, Patrick Heimbach"
+      content: |
+        - Matthew Mazloff
+        - Sarah Gille
+        - Donata Giglio
+        - Patrick Heimbach
     - name: Publications
       content: |
         - [AIES](https://doi.org/10.1175/AIES-D-24-0027.1)
@@ -44,7 +48,13 @@
       url: https://sose.ucsd.edu/forecasts/ArcticIceMotion/
   sections:
     - name: Contributors
-      content: "Matthew Mazloff, Sarah Gille, Donata Giglio, Patrick Heimbach, Cecilia Bitz, Kayli Matsuyoshi"
+      content: |
+        - Matthew Mazloff
+        - Sarah Gille
+        - Donata Giglio
+        - Patrick Heimbach
+        - Cecilia Bitz
+        - Kayli Matsuyoshi
     - name: Publications
       content: |
         - [AIES](https://doi.org/10.1175/AIES-D-23-0004.1)
@@ -60,7 +70,11 @@
   image: /assets/images/arocean.png
   sections:
     - name: Contributors
-      content: "Matthew Mazloff, Sarah Gille, Donata Giglio, Aniruddh Varadarajan"
+      content: |
+        - Matthew Mazloff
+        - Sarah Gille
+        - Donata Giglio
+        - Aniruddh Varadarajan
     - name: Publications
       content: |
         - [JPO](https://doi.org/10.1175/JPO-D-21-0272.1)
