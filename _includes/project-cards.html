@@ -15,28 +15,29 @@
         {% assign color_class = "bg-purple-100 text-gray-900" %}
       {% endif %}
 
-      {% assign lines = section.content | newline_to_br | split: "<br />" %}
-<div class="flex flex-wrap gap-2 mt-2">
-  {% for line in lines %}
-    {% assign line_clean = line %}
-    {% if line_clean startswith "- " %}
-      {% assign line_clean = line_clean | remove_first: "- " %}
-    {% endif %}
+{% for line in lines %}
+  {% assign line_clean = line | strip %}
+  {% if line_clean == "" %}
+    {% continue %}
+  {% endif %}
 
-    {% if line_clean contains "[" and line_clean contains "](" %}
-      {% assign label = line_clean | remove: "[" | split: "](" %}
-      {% assign text = label[0] %}
-      {% assign url = label[1] | remove: ")" %}
-      <a href="{{ url | strip }}" target="_blank" rel="noopener" class="btn">
-        {{ text | strip }}
-      </a>
-    {% else %}
-      <span class="btn bg-gray-300 text-gray-600 cursor-default">
-        {{ line_clean | remove: '[' | remove: ']' | strip }}
-      </span>
-    {% endif %}
-  {% endfor %}
-</div>
+  {% if line_clean startswith "- " %}
+    {% assign line_clean = line_clean | remove_first: "- " %}
+  {% endif %}
+
+  {% if line_clean contains "[" and line_clean contains "](" %}
+    {% assign label = line_clean | remove: "[" | split: "](" %}
+    {% assign text = label[0] %}
+    {% assign url = label[1] | remove: ")" %}
+    <a href="{{ url | strip }}" target="_blank" rel="noopener" class="btn">
+      {{ text | strip }}
+    </a>
+  {% else %}
+    <span class="btn bg-gray-300 text-gray-600 cursor-default">
+      {{ line_clean | remove: '[' | remove: ']' | strip }}
+    </span>
+  {% endif %}
+{% endfor %}
 
     <a href="{{ project.read_more_url }}" class="read-more-button">Read more</a>
 
