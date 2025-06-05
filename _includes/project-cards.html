@@ -22,7 +22,7 @@
           {% continue %}
         {% endif %}
 
-        {% if line_clean startswith "- " %}
+        {% if line_clean | slice: 0, 2 == "- " %}
           {% assign line_clean = line_clean | remove_first: "- " %}
         {% endif %}
 
