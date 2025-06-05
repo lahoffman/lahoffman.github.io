@@ -24,14 +24,14 @@ nav {
   padding: 6px 12px;
   margin: 2px 4px;
   font-size: 0.875rem;
-  background-color: #e0f7fa;
-  color: #363535;
+  background-color: #e0f7fa !important;
+  color: #363535 !important;
   border-radius: 5px;
   text-decoration: none;
 }
 
 .btn:hover {
-  background-color: #AFE1AF; /* Darker green on hover */
+  background-color: #AFE1AF !important; /* Darker green on hover */
 }
 
 .bg-sky-100 {
@@ -112,8 +112,8 @@ nav {
 
 .read-more-button {
   display: block;
-  background-color: #007bff;
-  color: #363535;
+  background-color: #56a5b6 !important;
+  color: white !important;
   text-align: center;
   padding: 10px;
   border-radius: 5px;
