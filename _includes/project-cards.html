@@ -8,11 +8,11 @@
     <details class="section-details">
       <summary>{{ section.name }}</summary>
 
-      {% assign color_class = "bg-sky-100 text-sky-800" %}
+      {% assign color_class = "bg-sky-100 text-gray-900" %}
       {% if section.name == "Talks" %}
-        {% assign color_class = "bg-green-100 text-green-800" %}
+        {% assign color_class = "bg-green-100 text-gray-900" %}
       {% elsif section.name == "Publications" %}
-        {% assign color_class = "bg-purple-100 text-purple-800" %}
+        {% assign color_class = "bg-purple-100 text-gray-900" %}
       {% endif %}
 
       {% assign lines = section.content | newline_to_br | split: "<br />" %}
