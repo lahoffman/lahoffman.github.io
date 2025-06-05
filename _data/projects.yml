@@ -33,31 +33,9 @@
         - [KITP Polar 2025](https://www.kitp.ucsb.edu/activities/polar25)
   read_more_url: /ai4insync/
   status: in-progress
-
-- title: ArcticMotionXAI
-  subtitle: Using XAI to understand Arctic sea ice motion forecasts
-  image: /assets/images/sivforecastsxai.png
-  sections:
-    - name: Contributors
-      content: |
-        - Matthew Mazloff
-        - Sarah Gille
-        - Donata Giglio
-        - Patrick Heimbach
-    - name: Publications
-      content: |
-        - [AIES](https://journals.ametsoc.org/view/journals/aies/4/1/AIES-D-24-0027.1.xml)
-    - name: Talks
-      content: |
-        - [IARPC Modelers 2024](https://www.iarpccollaborations.org/events/25028)
-        - [Liege Colloquium]
-        - [AI4ER Seminar 2023]
-        - [ATOC Seminar 2023]
-        - [Scientific ML Symposium 2023]
-  read_more_url: /arcticmotionxai/
   
-- title: ArcticSIV
-  subtitle: Machine learning forecasts of Arctic sea ice motion
+- title: ArcticIceMotion
+  subtitle: Machine learning forecasts of Arctic sea ice motion with XAI to understand drivers of variability
   image: /assets/images/sivforecasts.png
   links:
     - label: Website
@@ -74,8 +52,14 @@
     - name: Publications
       content: |
         - [AIES](https://doi.org/10.1175/AIES-D-23-0004.1)
+        - [AIES](https://journals.ametsoc.org/view/journals/aies/4/1/AIES-D-24-0027.1.xml)
     - name: Talks
       content: |
+        - [IARPC Modelers 2024](https://www.iarpccollaborations.org/events/25028)
+        - [Liege Colloquium]
+        - [AI4ER Seminar 2023]
+        - [ATOC Seminar 2023]
+        - [Scientific ML Symposium 2023]
         - [ECCO 2022](https://ecco-group.org/docs/ecco_annual_mtg23_day2_05_hoffman.pdf)
         - [OSM 2022](https://www.youtube.com/watch?v=BfF_DkMtN0I)
         - [Polar AMS 2022](https://ams.confex.com/ams/CMM2022/meetingapp.cgi/Paper/405464)
