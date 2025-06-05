@@ -15,6 +15,7 @@
         {% assign color_class = "bg-purple-100 text-gray-900" %}
       {% endif %}
 
+{% assign lines = section.content | newline_to_br | split: "<br />" %}
 {% for line in lines %}
   {% assign line_clean = line | strip %}
   {% if line_clean == "" %}
