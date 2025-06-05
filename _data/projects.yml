@@ -36,7 +36,7 @@
   
 - title: ArcticIceMotion
   subtitle: Machine learning forecasts of Arctic sea ice motion with XAI to understand drivers of variability
-  image: /assets/images/sivforecasts.png
+  image: /assets/images/arcticicemotionlogo.png
   links:
     - label: Website
       url: https://sose.ucsd.edu/forecasts/ArcticIceMotion/
