@@ -23,8 +23,6 @@ permalink: /cv
 
 <p><H4>Education</H4></p>
 <br>
-
-<br>
 <p><b>University of California San Diego</b>, Doctor of Philosophy in Chemical Engineering (September 2023)</p>
 <p><i>Thesis: "Freshwater Processes in the Upper Ocean" advised by Matthew Mazloff, Sarah Gille, and Donata Giglio</i></p>
 <br>
