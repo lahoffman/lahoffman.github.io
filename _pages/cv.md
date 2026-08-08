@@ -169,7 +169,7 @@ Honors and awards
 
 Activities
 ======
-* Nov. 2022– Dec. 2025: MPOWIR Mentor Group.
+* 2022-2025: MPOWIR Mentor Group.
 * Jan.–Dec. 2021: URGE Pod Member, Unlearning Racism in the Geosciences.
 * Feb. 2013–Feb. 2015: Engineers Without Borders, Fundraising Director.
 
