@@ -175,4 +175,4 @@ Activities
 
 Personal interests
 ======
-* Bouldering, backpacking, guitar, violin, yoga, and cats. ☪︎
+* Bouldering, handstands, backpacking, surfing, guitar, violin, yoga, aimless wandering, and cats. ☪︎
