@@ -21,3 +21,12 @@ package-lock.json
 
 # Ignore files created by MacOS
 .DS_Store
+
+# LaTeX build litter from `make pdf` (cv/cv.pdf is copied to files/cv.pdf)
+cv/*.aux
+cv/*.log
+cv/*.out
+cv/*.fls
+cv/*.fdb_latexmk
+cv/*.synctex.gz
+cv/cv.pdf

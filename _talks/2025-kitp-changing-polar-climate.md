@@ -1,9 +1,11 @@
 ---
-title: "The Physics of Changing Polar Climate"
+title: "Kavli Institute for Theoretical Physics (KITP), The Physics of Changing Polar Climate"
 collection: talks
 type: "Oral presentation"
 permalink: /talks/2025-kitp-changing-polar-climate
-venue: "Kavli Institute for Theoretical Physics (KITP)"
+venue: "Kavli Institute for Theoretical Physics (KITP), The Physics of Changing Polar Climate"
 date: 2025-01-04
-location: "Santa Barbara, CA, USA"
+location: "Santa Barbara, CA"
 ---
+
+<!-- DO NOT EDIT. Generated from _data/cv_source.yml by scripts/build_cv.py. Run `make cv` after editing the YAML. -->

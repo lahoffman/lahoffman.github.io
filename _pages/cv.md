@@ -7,73 +7,78 @@ redirect_from:
   - /resume
 ---
 
+<!-- DO NOT EDIT. Generated from _data/cv_source.yml by scripts/build_cv.py. Run `make cv` after editing the YAML. -->
+
 {% include base_path %}
+
+[Download this CV as a PDF]({{ base_path }}/files/cv.pdf)
 
 Research interests
 ======
-Polar science; sea ice; machine learning and explainable artificial intelligence; physical oceanography; air&ndash;sea&ndash;ice interactions; climate variability and predictability; AI-enabled approaches for polar observing applications.
+Polar science; sea ice; machine learning and explainable artificial intelligence; physical oceanography; air–sea–ice interactions; climate variability and predictability; AI-enabled approaches for polar observing applications.
 
 Education
 ======
-* Ph.D. in Chemical Engineering, University of California San Diego, 2023
-* M.S. in Chemical Engineering, University of California San Diego, 2019
-* B.A./B.S. in Mechanical Engineering, University of San Diego, 2016
+* Ph.D., Chemical Engineering, University of California San Diego, 2023
+* M.S., Chemical Engineering, University of California San Diego, 2019
+* B.A./B.S., Mechanical Engineering, University of San Diego, 2016
   * Mathematics and Chemistry minors; Honors Program
   * 3.98 major GPA; Dean's List, First Honors
 
 Research experience
 ======
-* Jan. 2026&ndash;Present: Postdoctoral Researcher
+* Jan. 2026–Present: Postdoctoral Researcher
   * University of California Santa Cruz, Santa Cruz, CA
   * PI: Xavier Prochaska
   * Characterizing density-based ocean fronts and associated submesoscale dynamics in high-resolution ocean model output
   * Developing scalable analysis and visualization workflows for large ocean model datasets
   * Contributing machine learning, modeling, and data-analysis expertise to emerging Antarctic sea ice observing-system design efforts
 
-* Feb. 2024&ndash;Dec. 2025: Postdoctoral Researcher
+* Feb. 2024–Dec. 2025: Postdoctoral Researcher
   * Université catholique de Louvain, Louvain-la-Neuve, Belgium
   * PI: François Massonnet
   * Developed machine learning and explainable AI approaches to predict and understand rapid Arctic sea ice loss events on seasonal to interannual timescales
   * Applied interpretable neural networks and climate model ensembles to investigate drivers and predictability of sea ice variability
 
-* Oct. 2023&ndash;Jan. 2024: Postdoctoral Researcher
+* Oct. 2023–Jan. 2024: Postdoctoral Researcher
   * Scripps Institution of Oceanography, UC San Diego, San Diego, CA
   * PI: Matt Mazloff
   * Evaluated explainable machine learning techniques for geoscience applications
   * Implemented components of an operational forecast system for sea-ice motion prediction using machine learning
 
-* Jun. 2019&ndash;Sep. 2023: Graduate Researcher
+* Jun. 2019–Sep. 2023: Graduate Researcher
   * Scripps Institution of Oceanography, UC San Diego, San Diego, CA
   * PI: Matt Mazloff
   * Investigated upper-ocean salinity response to atmospheric river events in the California Current System using observations and ocean model output
   * Developed machine learning and explainable AI approaches to predict and understand Arctic sea-ice dynamics from remote sensing data
 
-* Sep. 2018&ndash;Mar. 2019: Graduate Researcher
+* Sep. 2018–Mar. 2019: Graduate Researcher
   * University of California San Diego, San Diego, CA
   * PI: Andrea Tao
   * Studied methods for improving recycled polymer blends using colloidal dispersions of silver nanoparticles
 
-* Mar. 2018&ndash;Aug. 2018: Research Assistant
+* Mar. 2018–Aug. 2018: Research Assistant
   * University of San Diego, San Diego, CA
   * PI: Truc Ngo
   * Characterized 3D printed PMMA impregnated with drugs using supercritical carbon dioxide processing techniques
 
-* Mar. 2015&ndash;Jun. 2017: Undergraduate Research Assistant and Honors Thesis
+* Mar. 2015–Jun. 2017: Undergraduate Research Assistant and Honors Thesis
   * University of San Diego, San Diego, CA
   * PI: Truc Ngo
   * Worked with members of El Cercado, Dominican Republic, and a community liaison to design a solar thermal water heater that met community needs and supported local ownership of the technology
 
 Industry experience
 ======
-* Jun. 2016&ndash;Jun. 2018: Lead Engineer
+* Jun. 2016–Jun. 2018: Lead Engineer
   * Primo Wind, Inc., San Diego, CA
   * Implemented design solutions for a small wind turbine system that improved power output and structural stability and optimized sustainability of materials and manufacturing
 
 Technical expertise
 ======
-* Programming: Python; MATLAB; UNIX/Linux; TensorFlow; Git; scientific computing workflows
-* Methods: Machine learning; neural networks; explainable artificial intelligence; predictive modeling; data analysis; remote sensing
-* Models: MITgcm; LLC4320; ECCO
+* Programming: Python; MATLAB; UNIX/Linux; LaTeX; BibTeX
+* Software/Tools: TensorFlow/Keras; Git; Claude
+* Methods: Machine learning; neural networks; explainable artificial intelligence; predictive modeling; data analysis; remote sensing; numerical modeling; scientific computing
+* Models: MITgcm; LLC4320; CESM; CMIP6
 * Languages: French, intermediate; Spanish, intermediate
 
 Publications
@@ -85,8 +90,8 @@ First-author publications
 * 2025: Hoffman, L., F. Massonnet, and A. Sticker. Probabilistic forecasts of September Arctic sea ice extent at the interannual timescale with data-driven statistical models. *Journal of Geophysical Research: Machine Learning and Computation*, 2, e2025JH000669. [DOI: 10.1029/2025JH000669](https://doi.org/10.1029/2025JH000669)
 * 2025: Hoffman, L., M. Mazloff, S.T. Gille, D. Giglio, and P. Heimbach. Evaluating the trustworthiness of explainable artificial intelligence (XAI) methods applied to regression predictions of Arctic sea-ice motion. *Artificial Intelligence for the Earth Systems*, 4, e240027. [DOI: 10.1175/AIES-D-24-0027.1](https://doi.org/10.1175/AIES-D-24-0027.1)
 * 2023: Hoffman, L., M. Mazloff, S.T. Gille, D. Giglio, P. Heimbach, C. Bitz, and K. Matsuyoshi. Machine learning for daily forecasts of Arctic sea-ice motion: an attribution assessment of model predictive skill. *Artificial Intelligence for the Earth Systems*, 2, 230004. [DOI: 10.1175/AIES-D-23-0004.1](https://doi.org/10.1175/AIES-D-23-0004.1)
-* 2022: Hoffman, L., M. Mazloff, S.T. Gille, D. Giglio, and A. Varadarajan. Ocean salinity response to atmospheric river precipitation events in the California Current System. *Journal of Physical Oceanography*, 52, 1867&ndash;1885. [DOI: 10.1175/JPO-D-21-0272.1](https://doi.org/10.1175/JPO-D-21-0272.1)
-* 2018: Hoffman, L., and T.T. Ngo. Affordable solar thermal water heating solution for rural Dominican Republic. *Renewable Energy*, 115, 1220&ndash;1230. [DOI: 10.1016/j.renene.2017.09.046](https://doi.org/10.1016/j.renene.2017.09.046)
+* 2022: Hoffman, L., M. Mazloff, S.T. Gille, D. Giglio, and A. Varadarajan. Ocean salinity response to atmospheric river precipitation events in the California Current System. *Journal of Physical Oceanography*, 52, 1867–1885. [DOI: 10.1175/JPO-D-21-0272.1](https://doi.org/10.1175/JPO-D-21-0272.1)
+* 2018: Hoffman, L., and T.T. Ngo. Affordable solar thermal water heating solution for rural Dominican Republic. *Renewable Energy*, 115, 1220–1230. [DOI: 10.1016/j.renene.2017.09.046](https://doi.org/10.1016/j.renene.2017.09.046)
 
 Co-author publications
 ------
@@ -101,7 +106,7 @@ Patents
 Invited talks
 ======
 * 2025: Earth Science Information Partners (ESIP) Machine Learning Cluster Meeting. Virtual. Oral presentation.
-* 2024: Interagency Arctic Research Policy Committee (IARPC) Modelers' Community of Practice March 2024 Meeting &ndash; Combining Modeling and Machine Learning Approaches to Understanding the Arctic Earth System. Virtual. Oral presentation.
+* 2024: Interagency Arctic Research Policy Committee (IARPC) Modelers' Community of Practice March 2024 Meeting – Combining Modeling and Machine Learning Approaches to Understanding the Arctic Earth System. Virtual. Oral presentation.
 * 2023: AI for the Study of Environmental Risk (AI4ER) Seminar Series, University of Cambridge. Cambridge, UK.
 * 2022: American Meteorological Society Collective Madison Meeting, 17th Conference on Polar Meteorology and Oceanography. Madison, WI. Oral presentation.
 * 2022: NOAA Science Seminar Series. Virtual. Oral presentation.
@@ -133,12 +138,12 @@ Conference presentations, workshops, and seminars
 
 Teaching
 ======
-* Summer 2020 & 2021: Instructor
+* Summer 2020 & 2021: Instructor, Climate Change and the Ocean
   * University of California San Diego, Academic Connections, San Diego, CA
   * Course: Climate Change and the Ocean
   * Developed and implemented a 4-week online pre-college course for high school students, including research and communication skill-building through accessing, plotting, analyzing, and presenting real-world oceanographic data
 
-* Sep. 2018&ndash;Dec. 2020: Teaching Assistant
+* Sep. 2018–Dec. 2020: Teaching Assistant
   * University of California San Diego, San Diego, CA
   * Courses: introductory fluid mechanics (3 offerings), advanced fluid mechanics (5 offerings), and material and energy balances (1 offering)
   * Led five hours of weekly discussion sessions with supplementary lectures and problem-solving support
@@ -150,27 +155,30 @@ Guest lectures
 
 Leadership, service, and mentorship
 ======
-* 2025&ndash;Present: Co-Lead, OASIS Working Group
+* 2025–Present: Co-Lead, OASIS Working Group
   * Coordinate an international Antarctica InSync working group focused on AI-enabled approaches relevant to Antarctic sea ice observing-system design and recommendations
-* Working group member, ORCAS
-* Peer review: *Journal of Climate*; *Geophysical Research Letters*; *Journal of Geophysical Research: Atmospheres*; *npj*; *Environmental Modelling & Software*; *Open Science Europe*
+* ORCAS: Working Group Member.
+* Peer Review: Journal of Climate; Geophysical Research Letters; Journal of Geophysical Research: Atmospheres; npj; Environmental Modelling & Software; Open Science Europe.
 * Mentorship:
-  * Antonio Martinez Soares, Master's student, Université catholique de Louvain, Fall 2024&ndash;Spring 2025
-  * Kayli Matsuyoshi, undergraduate student, Scripps Institution of Oceanography, Summer 2021
-  * Aniruddh Varadarajan, undergraduate student, University of California San Diego, Fall 2020&ndash;Spring 2021
+  * Antonio Martinez Soares, Master's Student, Université catholique de Louvain, Fall 2024–Spring 2025
+  * Kayli Matsuyoshi, Undergraduate Student, Scripps Institution of Oceanography, Summer 2021
+  * Aniruddh Varadarajan, Undergraduate Student, University of California San Diego, Fall 2020–Spring 2021
 
 Honors and awards
 ======
-* 2021: Interdisciplinary Research Award, UC San Diego
-* Mar.&ndash;Jun. 2020: Teaching Assistant Commendation, "For Extraordinary Impact as a Teaching Assistant"
-* 2015&ndash;2016: Achievement Rewards for College Scientists (ARCS), $5,000
-* 2011&ndash;2016: Alcala Award, merit-based scholarship, $20,000 annually
-* Fall 2015&ndash;Present: Tau Beta Pi, Engineering Honor Society
-* Spring 2016&ndash;Present: Pi Tau Sigma, Engineering Honor Society
+* 2021: Interdisciplinary Research Award, UC San Diego.
+* Mar.–Jun. 2020: Teaching Assistant Commendation, "For Extraordinary Impact as a Teaching Assistant."
+* 2015–2016: Achievement Rewards for College Scientists (ARCS), $5,000.
+* 2011–2016: Alcala Award, Merit Based Scholarship, $20,000 annually.
+* Fall 2015–Present: Tau Beta Pi, Engineering Honor Society.
+* Spring 2016–Present: Pi Tau Sigma, Engineering Honor Society.
 
 Activities
 ======
-* Nov. 2022&ndash;Present: MPOWIR Mentor Group
-* Jan.&ndash;Dec. 2021: URGE Pod Member, Unlearning Racism in the Geosciences
-* Feb. 2013&ndash;Feb. 2015: Engineers Without Borders, Fundraising Director
-* 2004&ndash;Present: Violinist &mdash; private lessons, chamber ensemble, symphony orchestra, and jazz band
+* Nov. 2022– Dec. 2025: MPOWIR Mentor Group.
+* Jan.–Dec. 2021: URGE Pod Member, Unlearning Racism in the Geosciences.
+* Feb. 2013–Feb. 2015: Engineers Without Borders, Fundraising Director.
+
+Personal interests
+======
+* Bouldering, backpacking, guitar, violin, yoga, and cats. ☪︎

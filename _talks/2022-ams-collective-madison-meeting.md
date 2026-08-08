@@ -1,9 +1,11 @@
 ---
 title: "American Meteorological Society Collective Madison Meeting, 17th Conference on Polar Meteorology and Oceanography"
 collection: talks
-type: "Invited talk"
+type: "Oral presentation"
 permalink: /talks/2022-ams-collective-madison-meeting
-venue: "American Meteorological Society"
-date: 2022-01-01
-location: "Madison, WI, USA"
+venue: "American Meteorological Society Collective Madison Meeting, 17th Conference on Polar Meteorology and Oceanography"
+date: 2022-01-02
+location: "Madison, WI"
 ---
+
+<!-- DO NOT EDIT. Generated from _data/cv_source.yml by scripts/build_cv.py. Run `make cv` after editing the YAML. -->

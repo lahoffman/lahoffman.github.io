@@ -1,0 +1,75 @@
+name: Build CV
+
+# Regenerates the CV page, the publications/talks/teaching collections, and
+# files/cv.pdf from _data/cv_source.yml, then commits the results back.
+# Edit ONLY _data/cv_source.yml -- everything else is generated.
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - "_data/cv_source.yml"
+      - "cv/preamble.tex"
+      - "scripts/build_cv.py"
+      - ".github/workflows/build-cv.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-cv-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      - name: Generate site content and cv.tex
+        run: python3 scripts/build_cv.py
+
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-fonts-extra \
+            latexmk
+
+      - name: Build PDF
+        run: |
+          cd cv
+          latexmk -pdf -interaction=nonstopmode -halt-on-error cv.tex
+          mkdir -p ../files
+          cp cv.pdf ../files/cv.pdf
+
+      - name: Upload PDF as an artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cv-pdf
+          path: files/cv.pdf
+
+      - name: Commit regenerated files
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A _pages/cv.md _publications _talks _teaching cv/cv.tex files/cv.pdf .cv-generated.json
+          if git diff --staged --quiet; then
+            echo "Nothing changed."
+          else
+            git commit -m "Rebuild CV from _data/cv_source.yml [skip ci]"
+            git push
+          fi

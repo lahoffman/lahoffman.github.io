@@ -1,9 +1,11 @@
 ---
 title: "NOAA Science Seminar Series"
 collection: talks
-type: "Invited talk"
+type: "Oral presentation"
 permalink: /talks/2022-noaa-science-seminar-series
-venue: "National Oceanic and Atmospheric Administration"
-date: 2022-01-02
+venue: "NOAA Science Seminar Series"
+date: 2022-01-01
 location: "Virtual"
 ---
+
+<!-- DO NOT EDIT. Generated from _data/cv_source.yml by scripts/build_cv.py. Run `make cv` after editing the YAML. -->

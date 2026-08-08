@@ -1,9 +1,11 @@
 ---
-title: "Atmospheric and Ocean Sciences Forum"
+title: "Atmospheric and Ocean Sciences Forum, University of Colorado Boulder"
 collection: talks
 type: "Seminar"
 permalink: /talks/2023-cu-boulder-atoc-forum
-venue: "University of Colorado Boulder"
+venue: "Atmospheric and Ocean Sciences Forum, University of Colorado Boulder"
 date: 2023-01-04
-location: "Boulder, CO, USA"
+location: "Boulder, CO"
 ---
+
+<!-- DO NOT EDIT. Generated from _data/cv_source.yml by scripts/build_cv.py. Run `make cv` after editing the YAML. -->

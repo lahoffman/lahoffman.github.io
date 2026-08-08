@@ -1,5 +1,5 @@
 ---
-title: "Guest Lecture: Introduction to Machine Learning for Earth and Climate Science"
+title: "Guest lecture: Introduction to Machine Learning for Earth and Climate Science"
 collection: teaching
 type: "Guest lecture"
 permalink: /teaching/2025-winter-guest-lecture-uclouvain
@@ -8,6 +8,8 @@ date: 2025-01-01
 location: "Louvain-la-Neuve, Belgium"
 ---
 
+<!-- DO NOT EDIT. Generated from _data/cv_source.yml by scripts/build_cv.py. Run `make cv` after editing the YAML. -->
+
 Winter 2025.
 
-Guest lecture introducing machine learning methods and their application to Earth and climate science, delivered in the course *Forecast, Prediction, and Projection in Climate Science*.
+Guest lecture delivered in the course *Forecast, Prediction, and Projection in Climate Science*.
