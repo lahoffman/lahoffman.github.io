@@ -17,12 +17,12 @@
 basics:
   first_name: Lauren
   family_name: Hoffman
-  email: lauren.hoffman@ucsc.edu
+  email: lhoffma2.edu
   # Optional -- uncomment to show in the PDF header:
   # phone: "+1 (000) 000-0000"
-  # homepage: lahoffman.github.io
-  # github: lahoffman
-  # orcid: 0000-0000-0000-0000
+  homepage: lahoffman.github.io
+  github: lahoffman
+  orcid: 0000-0002-9563-8925
 
 # Order in which sections appear, on the website AND in the PDF.
 # Reorder or delete lines here; no code changes needed.

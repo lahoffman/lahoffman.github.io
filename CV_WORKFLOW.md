@@ -34,6 +34,7 @@ the PDF. There is nowhere else to update.
 | --- | --- |
 | `make cv` | Regenerate everything, including `files/cv.pdf` |
 | `make site` | Regenerate website files only (no LaTeX needed) |
+| `make texdeps` | Check the LaTeX toolchain and print how to fix it |
 | `make check` | Fail if generated files are stale — used by CI |
 | `make serve` | Rebuild, then run the Jekyll dev server |
 | `make clean` | Remove LaTeX build litter |
@@ -44,6 +45,23 @@ the PDF. There is nowhere else to update.
 ```sh
 curl -sL https://yihui.org/tinytex/install-bin-unix.sh | sh
 tlmgr install moderncv fontawesome5 xurl enumitem latexmk
+```
+
+If LaTeX is missing or incomplete, `make cv` no longer fails: it regenerates
+all the site files, prints a `SKIPPED:` line explaining what is absent, and
+exits cleanly. `make texdeps` then diagnoses the toolchain and prints the exact
+command to fix it.
+
+A common macOS wrinkle: BasicTeX installs to a root-owned tree, so `tlmgr`
+needs `sudo`. And if `tlmgr` reports *"Local TeX Live (N) is older than remote
+repository (N+1)"*, your distribution is a full release behind CTAN and cannot
+install anything until it crosses releases:
+
+```sh
+curl -L https://mirror.ctan.org/systems/texlive/tlnet/update-tlmgr-latest.sh -o /tmp/upd.sh
+sudo sh /tmp/upd.sh --update
+sudo tlmgr update --self --all
+sudo tlmgr install moderncv fontawesome5 xurl enumitem
 ```
 
 If you would rather not install LaTeX at all, skip it — push and let the Action
