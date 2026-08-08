@@ -23,49 +23,43 @@ Education
 * M.S., Chemical Engineering, University of California San Diego, 2019
 * B.A./B.S., Mechanical Engineering, University of San Diego, 2016
   * Mathematics and Chemistry minors; Honors Program
-  * 3.98 major GPA; Dean's List, First Honors
+  * Dean's List, First Honors
 
 Research experience
 ======
 * Jan. 2026–Present: Postdoctoral Researcher
   * University of California Santa Cruz, Santa Cruz, CA
-  * PI: Xavier Prochaska
+  * Advisor: Xavier Prochaska
   * Characterizing density-based ocean fronts and associated submesoscale dynamics in high-resolution ocean model output
   * Developing scalable analysis and visualization workflows for large ocean model datasets
-  * Contributing machine learning, modeling, and data-analysis expertise to emerging Antarctic sea ice observing-system design efforts
 
 * Feb. 2024–Dec. 2025: Postdoctoral Researcher
   * Université catholique de Louvain, Louvain-la-Neuve, Belgium
-  * PI: François Massonnet
+  * Advisor: François Massonnet
   * Developed machine learning and explainable AI approaches to predict and understand rapid Arctic sea ice loss events on seasonal to interannual timescales
-  * Applied interpretable neural networks and climate model ensembles to investigate drivers and predictability of sea ice variability
 
 * Oct. 2023–Jan. 2024: Postdoctoral Researcher
   * Scripps Institution of Oceanography, UC San Diego, San Diego, CA
-  * PI: Matt Mazloff
-  * Evaluated explainable machine learning techniques for geoscience applications
+  * Advisor: Matt Mazloff
   * Implemented components of an operational forecast system for sea-ice motion prediction using machine learning
 
 * Jun. 2019–Sep. 2023: Graduate Researcher
   * Scripps Institution of Oceanography, UC San Diego, San Diego, CA
-  * PI: Matt Mazloff
+  * Advisor: Matt Mazloff
   * Investigated upper-ocean salinity response to atmospheric river events in the California Current System using observations and ocean model output
   * Developed machine learning and explainable AI approaches to predict and understand Arctic sea-ice dynamics from remote sensing data
 
 * Sep. 2018–Mar. 2019: Graduate Researcher
   * University of California San Diego, San Diego, CA
-  * PI: Andrea Tao
-  * Studied methods for improving recycled polymer blends using colloidal dispersions of silver nanoparticles
+  * Advisor: Andrea Tao
 
 * Mar. 2018–Aug. 2018: Research Assistant
   * University of San Diego, San Diego, CA
-  * PI: Truc Ngo
-  * Characterized 3D printed PMMA impregnated with drugs using supercritical carbon dioxide processing techniques
+  * Advisor: Truc Ngo
 
 * Mar. 2015–Jun. 2017: Undergraduate Research Assistant and Honors Thesis
   * University of San Diego, San Diego, CA
-  * PI: Truc Ngo
-  * Worked with members of El Cercado, Dominican Republic, and a community liaison to design a solar thermal water heater that met community needs and supported local ownership of the technology
+  * Advisor: Truc Ngo
 
 Industry experience
 ======
