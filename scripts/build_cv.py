@@ -344,27 +344,27 @@ def title_for(data, key, table, title_case=False):
     return custom or table.get(key) or titleize(key, title_case)
 
 
-def generic_items(value):
+def generic_items(value, fmt="md", sep=None):
     """
     Normalise an unrecognised section into (hint, text) pairs, so ANY new key
     added to cv_source.yml renders without touching this file. Shapes accepted:
 
-        key: a paragraph of prose                       -> one unhinted line
-        key: [plain string, plain string]               -> unhinted bullets
-        key: [{date|dates|label|term|year: .., text: ..}] -> hinted bullets
+        key: a paragraph of prose                        -> one unhinted line
+        key: [plain string, plain string]                -> unhinted bullets
+        key: [{date|dates|label|term: .., text: ..}]      -> hinted bullets
+        key: {compact: true, entries: [...]}             -> compact one-liners
     """
+    sep = DEFAULT_SEPARATOR if sep is None else sep
     if value is None:
         return []
     if isinstance(value, str):
-        return [("", value)]
+        return [("", md_escape(value) if fmt == "md" else norm_ws(value))]
     items = []
-    for entry in value:
+    for entry in compact_entries(value):        # unwraps {compact:, entries:}
         if isinstance(entry, str):
-            items.append(("", entry))
+            items.append(("", md_escape(entry) if fmt == "md" else norm_ws(entry)))
         elif isinstance(entry, dict):
-            hint = next((entry[k] for k in ("date", "dates", "label", "term", "year")
-                         if entry.get(k)), "")
-            items.append((str(hint), str(entry.get("text") or entry.get("title") or "")))
+            items.append(compact_line(entry, fmt, sep))
     return items
 
 
@@ -399,6 +399,42 @@ def compact_entries(value):
 
 def is_compact(value):
     return isinstance(value, dict) and value.get("compact", True)
+
+
+def merged_sections(data):
+    """{display_key: [source_key, ...]} -- render several data blocks as one."""
+    return data.get("merged_sections") or {}
+
+
+def merged_members(data):
+    out = set()
+    for sources in merged_sections(data).values():
+        out.update(sources)
+    return out
+
+
+def as_compact(source_key, e):
+    """Map a source section's entry shape onto the compact {role, text} shape,
+    so different kinds of entry can share one merged section."""
+    if source_key == "teaching":
+        return {"dates": e.get("dates"),
+                "role": e.get("title"),
+                "text": e.get("summary") or e.get("org")}
+    if source_key == "guest_lectures":
+        return {"dates": e.get("term"),
+                "role": "Guest Lecture",
+                "text": "; ".join(x for x in (e.get("title"), e.get("course"),
+                                              e.get("org")) if x)}
+    return e          # already a compact entry
+
+
+def merged_entries(data, key):
+    """Every entry of a merged section, in source order."""
+    items = []
+    for src in merged_sections(data).get(key, []):
+        for e in compact_entries(data.get(src)):
+            items.append(as_compact(src, e))
+    return items
 
 
 # ------------------------------------------------------------ markdown CV ----
@@ -458,12 +494,20 @@ def build_markdown(data):
         L.extend([title_for(data, key, MD_SECTION_TITLES), "=" * 6])
 
     for key in data["section_order"]:
-        if key not in MD_SECTION_TITLES and key not in talk_sections(data):
+        if key in merged_sections(data):
+            head(key)
+            for e in merged_entries(data, key):
+                hint, body = compact_line(e, "md", separator(data))
+                L.append("* %s: %s" % (md_escape(hint), body) if hint
+                         else "* %s" % body)
+            L.append("")
+
+        elif key not in MD_SECTION_TITLES and key not in talk_sections(data):
             # Unknown key -> render generically. No code change needed to add one.
             head(key)
-            for hint, text in generic_items(data.get(key)):
-                L.append(("* %s: %s" % (md_escape(hint), md_escape(text)))
-                         if hint else "* %s" % md_escape(text))
+            for hint, text in generic_items(data.get(key), "md", separator(data)):
+                L.append(("* %s: %s" % (md_escape(hint), text))
+                         if hint else "* %s" % text)
             L.append("")
 
         elif key == "research_interests":
@@ -747,7 +791,13 @@ def build_tex(data):
         L.append(r"\section{%s}" % title_for(data, key, TEX_SECTION_TITLES, True))
 
     for key in data["section_order"]:
-        if key not in TEX_SECTION_TITLES and key not in talk_sections(data):
+        if key in merged_sections(data):
+            head(key)
+            for e in merged_entries(data, key):
+                hint, body = compact_line(e, "tex", separator(data))
+                L.append(r"\cvitem{%s}{%s}" % (tex_escape(hint), tex_escape(body)))
+
+        elif key not in TEX_SECTION_TITLES and key not in talk_sections(data):
             # Unknown key -> render generically. No code change needed to add one.
             head(key)
             for hint, text in generic_items(data.get(key)):
@@ -867,7 +917,8 @@ def prune_stale():
 # Keys that are configuration or are consumed by another section, so their
 # absence from section_order is expected rather than a mistake.
 NOT_SECTIONS = {"basics", "section_order", "section_titles", "talks",
-                "talk_sections"}
+                "talk_sections", "merged_sections", "compact_separator",
+                "date_style"}
 
 
 def validate(data):
@@ -876,8 +927,9 @@ def validate(data):
     msgs = []
     order = list(data.get("section_order", []))
 
+    members = merged_members(data)
     for key in data:
-        if key in NOT_SECTIONS or key in order:
+        if key in NOT_SECTIONS or key in order or key in members:
             continue
         if key in talk_sections(data):
             continue
@@ -885,7 +937,7 @@ def validate(data):
             "'%s' exists in cv_source.yml but is NOT in section_order, so it will "
             "not appear anywhere. Add it to section_order to show it." % key)
 
-    virtual = set(talk_sections(data))
+    virtual = set(talk_sections(data)) | set(merged_sections(data))
     for key in order:
         if key not in data and key not in virtual:
             msgs.append("section_order lists '%s', but there is no such key in "

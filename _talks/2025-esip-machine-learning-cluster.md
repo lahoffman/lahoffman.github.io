@@ -1,5 +1,5 @@
 ---
-title: "Machine learning is a useful tool to predict and understand sea ice motion in the Arctiic."
+title: "Machine learning is a useful tool to predict and understand sea ice motion in the Arctic."
 collection: talks
 type: "Oral presentation"
 permalink: /talks/2025-esip-machine-learning-cluster

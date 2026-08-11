@@ -34,19 +34,14 @@ section_order:
   - research_interests
   - education
   - research_experience
+  - teaching_mentoring
+  - leadership_service
+  - honors
   - technical_expertise
   - publications
-  - patents
   - invited_talks
   - presentations
   - meetings_workshops
-  - teaching
-  - guest_lectures
-  - mentorship
-  - leadership
-  - service
-  - honors
-  - activities
   - industry_experience
   - personal_interests
 
@@ -57,7 +52,18 @@ compact_separator: "; "
 # the key (personal_interests -> "Personal Interests").
 section_titles:
   meetings_workshops: Meetings and Workshops
-  activities: Professional Activities and Outreach
+  teaching_mentoring: Teaching and Mentoring
+  leadership_service: Leadership and Professional Service
+
+# Sections assembled from several data blocks. The sources keep their own shape
+# (and keep feeding the website collections); they are merged for display only,
+# in the order listed. A key that appears here does not need to be in
+# section_order -- only the merged name does.
+merged_sections:
+  teaching_mentoring:
+    - teaching
+    - guest_lectures
+    - mentorship
 
 # Which `group:` value in the talks list feeds which section above.
 talk_sections:
@@ -67,10 +73,9 @@ talk_sections:
 
 # -----------------------------------------------------------------------------
 research_interests: >-
-  Polar science; sea ice; machine learning and explainable artificial
-  intelligence; physical oceanography; air–sea–ice interactions; climate
-  variability and predictability; AI-enabled approaches for polar observing
-  applications.
+  Polar Science, Sea Ice, Physical Oceanography, Air–Sea–Ice Interactions, Climate
+  Variability and Predictability, Machine Learning, Explainable Artificial
+  Intelligence, AI-Enabled Observing System Design.
 
 # -----------------------------------------------------------------------------
 education:
@@ -165,6 +170,9 @@ industry_experience:
       - Implemented design solutions for a small wind turbine system that improved
         power output and structural stability and optimized sustainability of
         materials and manufacturing.
+      - "Patent: McMahon, E., and L. Hoffman (2017). High torque wind turbine
+        blade, turbine, and associated systems and methods. U.S. Patent No.
+        9,797,370, U.S. Patent and Trademark Office."
 
 # -----------------------------------------------------------------------------
 technical_expertise:
@@ -307,13 +315,6 @@ publications:
     excerpt: Characterization of 3D-printed PMMA impregnated with drugs using
       supercritical carbon dioxide processing.
 
-# -----------------------------------------------------------------------------
-patents:
-  - year: 2017
-    text: McMahon, E., and L. Hoffman. High torque wind turbine blade, turbine, and
-      associated systems and methods. U.S. Patent No. 9,797,370. U.S. Patent and
-      Trademark Office.
-    url: https://patents.google.com/patent/US9797370B1/en
 
 # -----------------------------------------------------------------------------
 # TALKS
@@ -349,7 +350,7 @@ talks:
     year: 2025
     group: invited
     type: Invited talk
-    title: Machine learning is a useful tool to predict and understand sea ice motion in the Arctiic.
+    title: Machine learning is a useful tool to predict and understand sea ice motion in the Arctic.
     meeting: Earth Science Information Partners (ESIP) Machine Learning Cluster Meeting
     venue: Earth Science Information Partners
     location: Virtual
@@ -741,39 +742,52 @@ mentorship:
   compact: true
   entries:
     - dates: 2024–2025
-      who: Antonio Martinez Soares
-      role: Master's Student
-      org: Université catholique de Louvain
+      role: Co-Mentor
+      text: Antonio Martinez Soares, Master's Student; Université catholique de
+        Louvain
     - dates: "2021"
-      who: Kayli Matsuyoshi
-      role: Undergraduate Student
-      org: Scripps Institution of Oceanography
+      role: Co-Mentor
+      text: Kayli Matsuyoshi, Undergraduate Student; Scripps Institution of
+        Oceanography
     - dates: 2020–2021
-      who: Aniruddh Varadarajan
-      role: Undergraduate Student
-      org: University of California San Diego
+      role: Co-Mentor
+      text: Aniruddh Varadarajan, Undergraduate Student; University of California
+        San Diego
 
 # -----------------------------------------------------------------------------
-leadership:
+# Leadership, service and outreach in one list, most recent first.
+leadership_service:
   compact: true
   entries:
+    - dates: "2026"
+      role: Invited Participant
+      text: Roundtable on climate modelling with the UN Secretary-General's
+        Scientific Advisory Board
     - dates: 2025–Present
       role: Co-Lead
-      org: OAISIS Working Group
-      note: International Antarctica InSync working group on AI-enabled approaches
-        to Antarctic sea ice observing-system design and recommendations
-
-# -----------------------------------------------------------------------------
-service:
-  compact: true
-  entries:
+      text: OAISIS Working Group; international Antarctica InSync working group on
+        AI-enabled approaches to Antarctic sea ice observing-system design and
+        recommendations
+    - dates: 2025–Present
+      role: Working Group Member
+      text: ORCAS (Observational Requirements in the Context of AI prediction
+        Systems)
     - dates: "2025"
       role: Student Poster Judge
-      org: AMS Conference on Polar Meteorology and Oceanography
+      text: AMS Conference on Polar Meteorology and Oceanography
+    - dates: 2022–2025
+      role: Mentor Group Member
+      text: MPOWIR (Mentoring Physical Oceanography Women+ to Increase Retention)
+    - dates: "2021"
+      role: Pod Member
+      text: URGE (Unlearning Racism in the Geosciences)
+    - dates: 2013–2015
+      role: Fundraising Director
+      text: Engineers Without Borders
     - label: Peer Review
-      text: "Journal of Climate; Geophysical Research Letters; Journal of Geophysical
-        Research: Atmospheres; npj; Environmental Modelling & Software; Open Science
-        Europe."
+      text: "Journal of Climate; Geophysical Research Letters; Journal of
+        Geophysical Research: Atmospheres; npj; Environmental Modelling &
+        Software; Open Science Europe."
 
 # -----------------------------------------------------------------------------
 honors:
@@ -792,21 +806,6 @@ honors:
     text: Pi Tau Sigma, Engineering Honor Society.
 
 # -----------------------------------------------------------------------------
-activities:
-  - date: "2026"
-    text: Invited to roundtable on climate modelling with the UN Secretary-General's
-      Scientific Advisory Board.
-  - date: 2025–Present
-    text: ORCAS (Observational Requirements in the Context of AI prediction
-      Systems) Working Group Member.
-  - date: 2022–2025
-    text: MPOWIR (Mentoring Physical Oceanography Women+ to Increase Retention)
-      Mentor Group.
-  - date: "2021"
-    text: URGE Pod Member, Unlearning Racism in the Geosciences.
-  - date: 2013–2015
-    text: Engineers Without Borders, Fundraising Director.
-
 # -----------------------------------------------------------------------------
 personal_interests:
   - text: Bouldering, handstands, backpacking, surfing, guitar, violin, yoga, aimless wandering, and cats. ☪︎

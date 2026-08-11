@@ -15,7 +15,7 @@ redirect_from:
 
 Research interests
 ======
-Polar science; sea ice; machine learning and explainable artificial intelligence; physical oceanography; air–sea–ice interactions; climate variability and predictability; AI-enabled approaches for polar observing applications.
+Polar Science, Sea Ice, Physical Oceanography, Air–Sea–Ice Interactions, Climate Variability and Predictability, Machine Learning, Explainable Artificial Intelligence, AI-Enabled Observing System Design.
 
 Education
 ======
@@ -61,6 +61,36 @@ Research experience
   * University of San Diego, San Diego, CA
   * Advisor: Truc Ngo
 
+Teaching and Mentoring
+======
+* 2020 & 2021: Instructor, Climate Change and the Ocean; UC San Diego Academic Connections; 4-week online pre-college course; students accessed, plotted, analyzed and presented real oceanographic data
+* 09/2018–12/2020: Teaching Assistant, Chemical Engineering; UC San Diego; fluid mechanics (8 offerings), material and energy balances (1); 5 hrs/week of lecture and discussion sections
+* 2025: Guest Lecture; Introduction to Machine Learning for Earth and Climate Science; Forecast, Prediction, and Projection in Climate Science; UCLouvain
+* 2023: Guest Lecture; Introduction to Machine Learning for Earth and Climate Science; Analysis of Physical Oceanographic Data; Scripps Institution of Oceanography
+* 2024–2025: Co-Mentor; Antonio Martinez Soares, Master's Student; Université catholique de Louvain
+* 2021: Co-Mentor; Kayli Matsuyoshi, Undergraduate Student; Scripps Institution of Oceanography
+* 2020–2021: Co-Mentor; Aniruddh Varadarajan, Undergraduate Student; University of California San Diego
+
+Leadership and Professional Service
+======
+* 2026: Invited Participant; Roundtable on climate modelling with the UN Secretary-General's Scientific Advisory Board
+* 2025–Present: Co-Lead; OAISIS Working Group; international Antarctica InSync working group on AI-enabled approaches to Antarctic sea ice observing-system design and recommendations
+* 2025–Present: Working Group Member; ORCAS (Observational Requirements in the Context of AI prediction Systems)
+* 2025: Student Poster Judge; AMS Conference on Polar Meteorology and Oceanography
+* 2022–2025: Mentor Group Member; MPOWIR (Mentoring Physical Oceanography Women+ to Increase Retention)
+* 2021: Pod Member; URGE (Unlearning Racism in the Geosciences)
+* 2013–2015: Fundraising Director; Engineers Without Borders
+* Peer Review: Journal of Climate; Geophysical Research Letters; Journal of Geophysical Research: Atmospheres; npj; Environmental Modelling & Software; Open Science Europe.
+
+Honors and awards
+======
+* 2021: Interdisciplinary Research Award, UC San Diego.
+* 2020: Teaching Assistant Commendation, "For Extraordinary Impact as a Teaching Assistant."
+* 2015–2016: Achievement Rewards for College Scientists (ARCS), $5,000.
+* 2011–2016: Alcala Award, Merit Based Scholarship, $20,000 annually.
+* 2015–Present: Tau Beta Pi, Engineering Honor Society.
+* 2016–Present: Pi Tau Sigma, Engineering Honor Society.
+
 Technical expertise
 ======
 * Programming: Python; MATLAB; UNIX/Linux; LaTeX; BibTeX
@@ -87,14 +117,10 @@ Co-author publications
 * 2025: Giglio, D., J. Sala, J. Gilson, **L. Hoffman**, and B. Kawzenuk. Adaptive sampling of the upper ocean by autonomous floats during atmospheric river precipitation. *Geophysical Research Letters*, 52, e2025GL117069. [DOI: 10.1029/2025GL117069](https://doi.org/10.1029/2025GL117069)
 * 2020: Ngo, T.T., **L. Hoffman**, G. Hoople, W. Trevena, U. Shakya, and G. Barr. Surface morphology and drug loading characterization of 3D-printed methacrylate-based polymer facilitated by supercritical carbon dioxide. *The Journal of Supercritical Fluids*, 160, 104786. [DOI: 10.1016/j.supflu.2020.104786](https://doi.org/10.1016/j.supflu.2020.104786)
 
-Patents
-======
-* 2017: McMahon, E., and L. Hoffman. High torque wind turbine blade, turbine, and associated systems and methods. U.S. Patent No. 9,797,370. U.S. Patent and Trademark Office. [Link](https://patents.google.com/patent/US9797370B1/en)
-
 Invited talks
 ======
 * 2025: "Introduction to Machine Learning for Earth and Climate Scientists." International Global Atmospheric Chemistry (IGAC) Early Career Researchers Online Conference. Virtual. Oral presentation.
-* 2025: "Machine learning is a useful tool to predict and understand sea ice motion in the Arctiic." Earth Science Information Partners (ESIP) Machine Learning Cluster Meeting. Virtual. Oral presentation.
+* 2025: "Machine learning is a useful tool to predict and understand sea ice motion in the Arctic." Earth Science Information Partners (ESIP) Machine Learning Cluster Meeting. Virtual. Oral presentation.
 * 2024: "Machine learning is a useful tool to predict and understand sea-ice motion in the Arctic." Interagency Arctic Research Policy Committee (IARPC) Modelers' Community of Practice March 2024 Meeting – Combining Modeling and Machine Learning Approaches to Understanding the Arctic Earth System. Virtual. Oral presentation.
 * 2023: "Machine learning is a useful tool to predict and understand sea-ice motion in the Arctic." AI for the Study of Environmental Risk (AI4ER) Seminar Series, University of Cambridge. Cambridge, UK.
 * 2022: "Machine Learning for Evaluating the Drivers of Variability in Arctic Sea-Ice Dynamics to Improve Forecasting." American Meteorological Society Collective Madison Meeting, 17th Conference on Polar Meteorology and Oceanography. Madison, WI. Oral presentation.
@@ -131,53 +157,12 @@ Meetings and Workshops
 * 2020: International Atmospheric Rivers Conference Sponsored Symposium. Virtual.
 * 2020: Ocean Sciences Meeting. San Diego, CA.
 
-Teaching
-======
-* 2020 & 2021: Instructor, Climate Change and the Ocean; UC San Diego Academic Connections; 4-week online pre-college course; students accessed, plotted, analyzed and presented real oceanographic data
-* 09/2018–12/2020: Teaching Assistant, Chemical Engineering; UC San Diego; fluid mechanics (8 offerings), material and energy balances (1); 5 hrs/week of lecture and discussion sections
-
-Guest lectures
-======
-* 2025: Introduction to Machine Learning for Earth and Climate Science. *Forecast, Prediction, and Projection in Climate Science*. UCLouvain.
-* 2023: Introduction to Machine Learning for Earth and Climate Science. *Analysis of Physical Oceanographic Data*. Scripps Institution of Oceanography.
-
-Mentorship
-======
-* 2024–2025: Antonio Martinez Soares, Master's Student; Université catholique de Louvain
-* 2021: Kayli Matsuyoshi, Undergraduate Student; Scripps Institution of Oceanography
-* 2020–2021: Aniruddh Varadarajan, Undergraduate Student; University of California San Diego
-
-Leadership
-======
-* 2025–Present: Co-Lead; OAISIS Working Group; International Antarctica InSync working group on AI-enabled approaches to Antarctic sea ice observing-system design and recommendations
-
-Service
-======
-* 2025: Student Poster Judge; AMS Conference on Polar Meteorology and Oceanography
-* Peer Review: Journal of Climate; Geophysical Research Letters; Journal of Geophysical Research: Atmospheres; npj; Environmental Modelling & Software; Open Science Europe.
-
-Honors and awards
-======
-* 2021: Interdisciplinary Research Award, UC San Diego.
-* 2020: Teaching Assistant Commendation, "For Extraordinary Impact as a Teaching Assistant."
-* 2015–2016: Achievement Rewards for College Scientists (ARCS), $5,000.
-* 2011–2016: Alcala Award, Merit Based Scholarship, $20,000 annually.
-* 2015–Present: Tau Beta Pi, Engineering Honor Society.
-* 2016–Present: Pi Tau Sigma, Engineering Honor Society.
-
-Professional Activities and Outreach
-======
-* 2026: Invited to roundtable on climate modelling with the UN Secretary-General's Scientific Advisory Board.
-* 2025–Present: ORCAS (Observational Requirements in the Context of AI prediction Systems) Working Group Member.
-* 2022–2025: MPOWIR (Mentoring Physical Oceanography Women+ to Increase Retention) Mentor Group.
-* 2021: URGE Pod Member, Unlearning Racism in the Geosciences.
-* 2013–2015: Engineers Without Borders, Fundraising Director.
-
 Industry experience
 ======
 * 06/2016–06/2018: Lead Engineer
   * Primo Wind, Inc., San Diego, CA
   * Implemented design solutions for a small wind turbine system that improved power output and structural stability and optimized sustainability of materials and manufacturing
+  * Patent: McMahon, E., and L. Hoffman (2017). High torque wind turbine blade, turbine, and associated systems and methods. U.S. Patent No. 9,797,370, U.S. Patent and Trademark Office
 
 Personal interests
 ======
