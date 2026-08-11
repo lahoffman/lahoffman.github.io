@@ -344,7 +344,7 @@ def title_for(data, key, table, title_case=False):
     return custom or table.get(key) or titleize(key, title_case)
 
 
-def generic_items(value, fmt="md", sep=None):
+def generic_items(value, fmt="md", sep=None, bold=True):
     """
     Normalise an unrecognised section into (hint, text) pairs, so ANY new key
     added to cv_source.yml renders without touching this file. Shapes accepted:
@@ -358,17 +358,22 @@ def generic_items(value, fmt="md", sep=None):
     if value is None:
         return []
     if isinstance(value, str):
-        return [("", md_escape(value) if fmt == "md" else norm_ws(value))]
+        return [("", md_escape(value) if fmt == "md" else tex_escape(value))]
     items = []
     for entry in compact_entries(value):        # unwraps {compact:, entries:}
         if isinstance(entry, str):
-            items.append(("", md_escape(entry) if fmt == "md" else norm_ws(entry)))
+            items.append(("", md_escape(entry) if fmt == "md" else tex_escape(entry)))
         elif isinstance(entry, dict):
-            items.append(compact_line(entry, fmt, sep))
+            items.append(compact_line(entry, fmt, sep, bold))
     return items
 
 
 DEFAULT_SEPARATOR = "; "
+
+
+def bold_roles(data):
+    """Bold the position title in compact entries. `bold_roles: false` to stop."""
+    return data.get("bold_roles", True)
 
 
 def separator(data):
@@ -376,18 +381,25 @@ def separator(data):
     return data.get("compact_separator", DEFAULT_SEPARATOR)
 
 
-def compact_line(e, fmt="md", sep=DEFAULT_SEPARATOR):
+def compact_line(e, fmt="md", sep=DEFAULT_SEPARATOR, bold=True):
     """
     One-line entry, Gregory-style:  Who, Role | Org  -- or Label: text.
     Assembled from whichever of these keys are present.
     """
-    esc = md_escape if fmt == "md" else norm_ws
+    esc = md_escape if fmt == "md" else tex_escape
+    hint = e.get("dates") or e.get("date") or ""
+
     if e.get("label") and e.get("text"):
         return e["label"], esc(e["text"])
-    left = ", ".join(x for x in (e.get("who"), e.get("role")) if x)
-    right = sep.join(x for x in (e.get("org"), e.get("note"), e.get("text")) if x)
-    body = sep.join(x for x in (left, right) if x)
-    return e.get("dates") or e.get("date") or "", esc(body)
+
+    # The position title is emphasised; everything else is plain. Bolding is
+    # applied AFTER escaping, so the markup itself is never escaped.
+    role = esc(e["role"]) if e.get("role") else ""
+    if role and bold:
+        role = ("**%s**" % role) if fmt == "md" else (r"\textbf{%s}" % role)
+    left = ", ".join(x for x in (esc(e["who"]) if e.get("who") else "", role) if x)
+    right = sep.join(esc(x) for x in (e.get("org"), e.get("note"), e.get("text")) if x)
+    return hint, sep.join(x for x in (left, right) if x)
 
 
 def compact_entries(value):
@@ -417,12 +429,13 @@ def as_compact(source_key, e):
     """Map a source section's entry shape onto the compact {role, text} shape,
     so different kinds of entry can share one merged section."""
     if source_key == "teaching":
+        # `role` is the bolded position; `title` is kept for the /teaching/ page.
         return {"dates": e.get("dates"),
-                "role": e.get("title"),
+                "role": e.get("role") or e.get("title"),
                 "text": e.get("summary") or e.get("org")}
     if source_key == "guest_lectures":
         return {"dates": e.get("term"),
-                "role": "Guest Lecture",
+                "role": e.get("role") or "Guest Lecturer",
                 "text": "; ".join(x for x in (e.get("title"), e.get("course"),
                                               e.get("org")) if x)}
     return e          # already a compact entry
@@ -497,7 +510,7 @@ def build_markdown(data):
         if key in merged_sections(data):
             head(key)
             for e in merged_entries(data, key):
-                hint, body = compact_line(e, "md", separator(data))
+                hint, body = compact_line(e, "md", separator(data), bold_roles(data))
                 L.append("* %s: %s" % (md_escape(hint), body) if hint
                          else "* %s" % body)
             L.append("")
@@ -505,7 +518,7 @@ def build_markdown(data):
         elif key not in MD_SECTION_TITLES and key not in talk_sections(data):
             # Unknown key -> render generically. No code change needed to add one.
             head(key)
-            for hint, text in generic_items(data.get(key), "md", separator(data)):
+            for hint, text in generic_items(data.get(key), "md", separator(data), bold_roles(data)):
                 L.append(("* %s: %s" % (md_escape(hint), text))
                          if hint else "* %s" % text)
             L.append("")
@@ -588,7 +601,7 @@ def build_markdown(data):
         elif key in ("mentorship", "leadership", "service"):
             head(key)
             for e in compact_entries(data.get(key)):
-                hint, body = compact_line(e, "md", separator(data))
+                hint, body = compact_line(e, "md", separator(data), bold_roles(data))
                 L.append("* %s: %s" % (md_escape(hint), body) if hint
                          else "* %s" % body)
             L.append("")
@@ -794,15 +807,15 @@ def build_tex(data):
         if key in merged_sections(data):
             head(key)
             for e in merged_entries(data, key):
-                hint, body = compact_line(e, "tex", separator(data))
-                L.append(r"\cvitem{%s}{%s}" % (tex_escape(hint), tex_escape(body)))
+                hint, body = compact_line(e, "tex", separator(data), bold_roles(data))
+                L.append(r"\cvitem{%s}{%s}" % (tex_escape(hint), body))
 
         elif key not in TEX_SECTION_TITLES and key not in talk_sections(data):
             # Unknown key -> render generically. No code change needed to add one.
             head(key)
-            for hint, text in generic_items(data.get(key)):
-                L.append(r"\cvitem{%s}{%s}" % (tex_escape(hint),
-                                               tex_escape(norm_ws(text))))
+            for hint, text in generic_items(data.get(key), "tex",
+                                            separator(data), bold_roles(data)):
+                L.append(r"\cvitem{%s}{%s}" % (tex_escape(hint), text))
 
         elif key == "research_interests":
             head(key)
@@ -879,9 +892,8 @@ def build_tex(data):
         elif key in ("mentorship", "leadership", "service"):
             head(key)
             for e in compact_entries(data.get(key)):
-                hint, body = compact_line(e, "tex", separator(data))
-                L.append(r"\cvitem{%s}{%s}" % (tex_escape(hint),
-                                               tex_escape(body)))
+                hint, body = compact_line(e, "tex", separator(data), bold_roles(data))
+                L.append(r"\cvitem{%s}{%s}" % (tex_escape(hint), body))
 
         elif key in ("honors", "activities"):
             head(key)

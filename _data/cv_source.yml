@@ -45,6 +45,9 @@ section_order:
   - industry_experience
   - personal_interests
 
+# Bold the position title (role) in compact entries. Set false to turn off.
+bold_roles: true
+
 # Separator between the parts of a compact one-line entry.
 compact_separator: "; "
 
@@ -687,8 +690,10 @@ teaching:
     - slug: 2020-summer-climate-change-and-the-ocean
       date: 2020-06-01
       dates: Summer 2020 & 2021
-      title: Instructor, Climate Change and the Ocean
-      summary: UC San Diego Academic Connections; 4-week online pre-college course;
+      role: Instructor            # bolded on the CV
+      title: Instructor, Climate Change and the Ocean   # used by the /teaching/ page
+      summary: Climate Change and the Ocean; UC San Diego Academic Connections;
+        4-week online pre-college course;
         students accessed, plotted, analyzed and presented real oceanographic data
       type: Pre-college course
       org: University of California San Diego, Academic Connections
@@ -703,8 +708,9 @@ teaching:
     - slug: 2018-fall-teaching-assistant-ucsd
       date: 2018-09-01
       dates: Sep. 2018–Dec. 2020
-      title: Teaching Assistant, Chemical Engineering
-      summary: UC San Diego; fluid mechanics (8 offerings), material and energy
+      role: Teaching Assistant    # bolded on the CV
+      title: Teaching Assistant, Chemical Engineering   # used by the /teaching/ page
+      summary: Chemical Engineering, UC San Diego; fluid mechanics (8 offerings), material and energy
         balances (1); 5 hrs/week of lecture and discussion sections
       type: Graduate and undergraduate courses
       org: University of California San Diego

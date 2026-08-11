@@ -7,7 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-Meow.
+My research uses machine learning and explainable AI to predict and understand sea-ice variability across timescales and to translate predictive understanding into observational guidance.
+
+I am currently a postdoctoral researcher at UC Santa Cruz developing machine learning approaches to study ocean fronts using output from high-resolution LLC4320 simulations. I also lead OAISIS, an Antarctica InSync working group bringing together observational scientists and machine-learning researchers to develop AI-enabled approaches for Southern Ocean observing-system design.
 
 {% include base_path %}
 

@@ -63,23 +63,23 @@ Research experience
 
 Teaching and Mentoring
 ======
-* 2020 & 2021: Instructor, Climate Change and the Ocean; UC San Diego Academic Connections; 4-week online pre-college course; students accessed, plotted, analyzed and presented real oceanographic data
-* 09/2018–12/2020: Teaching Assistant, Chemical Engineering; UC San Diego; fluid mechanics (8 offerings), material and energy balances (1); 5 hrs/week of lecture and discussion sections
-* 2025: Guest Lecture; Introduction to Machine Learning for Earth and Climate Science; Forecast, Prediction, and Projection in Climate Science; UCLouvain
-* 2023: Guest Lecture; Introduction to Machine Learning for Earth and Climate Science; Analysis of Physical Oceanographic Data; Scripps Institution of Oceanography
-* 2024–2025: Co-Mentor; Antonio Martinez Soares, Master's Student; Université catholique de Louvain
-* 2021: Co-Mentor; Kayli Matsuyoshi, Undergraduate Student; Scripps Institution of Oceanography
-* 2020–2021: Co-Mentor; Aniruddh Varadarajan, Undergraduate Student; University of California San Diego
+* 2020 & 2021: **Instructor**; Climate Change and the Ocean; UC San Diego Academic Connections; 4-week online pre-college course; students accessed, plotted, analyzed and presented real oceanographic data
+* 09/2018–12/2020: **Teaching Assistant**; Chemical Engineering, UC San Diego; fluid mechanics (8 offerings), material and energy balances (1); 5 hrs/week of lecture and discussion sections
+* 2025: **Guest Lecturer**; Introduction to Machine Learning for Earth and Climate Science; Forecast, Prediction, and Projection in Climate Science; UCLouvain
+* 2023: **Guest Lecturer**; Introduction to Machine Learning for Earth and Climate Science; Analysis of Physical Oceanographic Data; Scripps Institution of Oceanography
+* 2024–2025: **Co-Mentor**; Antonio Martinez Soares, Master's Student; Université catholique de Louvain
+* 2021: **Co-Mentor**; Kayli Matsuyoshi, Undergraduate Student; Scripps Institution of Oceanography
+* 2020–2021: **Co-Mentor**; Aniruddh Varadarajan, Undergraduate Student; University of California San Diego
 
 Leadership and Professional Service
 ======
-* 2026: Invited Participant; Roundtable on climate modelling with the UN Secretary-General's Scientific Advisory Board
-* 2025–Present: Co-Lead; OAISIS Working Group; international Antarctica InSync working group on AI-enabled approaches to Antarctic sea ice observing-system design and recommendations
-* 2025–Present: Working Group Member; ORCAS (Observational Requirements in the Context of AI prediction Systems)
-* 2025: Student Poster Judge; AMS Conference on Polar Meteorology and Oceanography
-* 2022–2025: Mentor Group Member; MPOWIR (Mentoring Physical Oceanography Women+ to Increase Retention)
-* 2021: Pod Member; URGE (Unlearning Racism in the Geosciences)
-* 2013–2015: Fundraising Director; Engineers Without Borders
+* 2026: **Invited Participant**; Roundtable on climate modelling with the UN Secretary-General's Scientific Advisory Board
+* 2025–Present: **Co-Lead**; OAISIS Working Group; international Antarctica InSync working group on AI-enabled approaches to Antarctic sea ice observing-system design and recommendations
+* 2025–Present: **Working Group Member**; ORCAS (Observational Requirements in the Context of AI prediction Systems)
+* 2025: **Student Poster Judge**; AMS Conference on Polar Meteorology and Oceanography
+* 2022–2025: **Mentor Group Member**; MPOWIR (Mentoring Physical Oceanography Women+ to Increase Retention)
+* 2021: **Pod Member**; URGE (Unlearning Racism in the Geosciences)
+* 2013–2015: **Fundraising Director**; Engineers Without Borders
 * Peer Review: Journal of Climate; Geophysical Research Letters; Journal of Geophysical Research: Atmospheres; npj; Environmental Modelling & Software; Open Science Europe.
 
 Honors and awards

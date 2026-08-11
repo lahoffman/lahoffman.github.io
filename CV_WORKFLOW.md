@@ -154,6 +154,25 @@ you like. Set `compact: false` on a section to go back to bulleted entries.
 Teaching entries additionally take a `summary:` — the one-line version shown on
 the CV — while keeping their `bullets:` for the fuller `/teaching/` page.
 
+## Bold position titles
+
+In compact sections the `role:` field is rendered in bold — that is the only
+part that bolds, so keep the position title there and put everything else in
+`text:`:
+
+```yaml
+    - dates: 2025–Present
+      role: Co-Lead                       # <- bold
+      text: OAISIS Working Group; ...     # <- plain
+```
+
+Teaching entries carry both: `role:` is the bolded position on the CV, while
+`title:` (e.g. "Instructor, Climate Change and the Ocean") still names the
+`/teaching/` collection page. Guest lectures default to `Guest Lecturer` unless
+you set `role:` yourself.
+
+Turn it off globally with `bold_roles: false`.
+
 ## Bold author name
 
 Your name is emboldened automatically in every publication author list. The
