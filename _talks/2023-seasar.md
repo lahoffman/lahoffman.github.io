@@ -1,7 +1,7 @@
 ---
 title: "SeaSAR 2023"
 collection: talks
-type: "Conference presentation"
+type: ""
 permalink: /talks/2023-seasar
 venue: "SeaSAR 2023"
 date: 2023-01-05

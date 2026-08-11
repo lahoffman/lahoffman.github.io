@@ -93,32 +93,34 @@ Patents
 
 Invited talks
 ======
-* 2025: Earth Science Information Partners (ESIP) Machine Learning Cluster Meeting. Virtual. Oral presentation.
-* 2024: Interagency Arctic Research Policy Committee (IARPC) Modelers' Community of Practice March 2024 Meeting – Combining Modeling and Machine Learning Approaches to Understanding the Arctic Earth System. Virtual. Oral presentation.
-* 2023: AI for the Study of Environmental Risk (AI4ER) Seminar Series, University of Cambridge. Cambridge, UK.
-* 2022: American Meteorological Society Collective Madison Meeting, 17th Conference on Polar Meteorology and Oceanography. Madison, WI. Oral presentation.
-* 2022: NOAA Science Seminar Series. Virtual. Oral presentation.
+* 2025: "Introduction to Machine Learning for Earth and Climate Scientists." International Global Atmospheric Chemistry (IGAC) Early Career Researchers Online Conference. Virtual. Oral presentation.
+* 2025: "Machine learning is a useful tool to predict and understand sea ice motion in the Arctiic." Earth Science Information Partners (ESIP) Machine Learning Cluster Meeting. Virtual. Oral presentation.
+* 2024: "Machine learning is a useful tool to predict and understand sea-ice motion in the Arctic." Interagency Arctic Research Policy Committee (IARPC) Modelers' Community of Practice March 2024 Meeting – Combining Modeling and Machine Learning Approaches to Understanding the Arctic Earth System. Virtual. Oral presentation.
+* 2023: "Machine learning is a useful tool to predict and understand sea-ice motion in the Arctic." AI for the Study of Environmental Risk (AI4ER) Seminar Series, University of Cambridge. Cambridge, UK.
+* 2022: "Machine Learning for Evaluating the Drivers of Variability in Arctic Sea-Ice Dynamics to Improve Forecasting." American Meteorological Society Collective Madison Meeting, 17th Conference on Polar Meteorology and Oceanography. Madison, WI. Oral presentation.
+* 2022: "Ocean surface salinity response to atmospheric river (AR) events in the California Current System." NOAA Science Seminar Series. Virtual. Oral presentation.
 
 Presentations
 ======
 * 2026: "Introduction to Machine Learning for Ocean Sciences." UC Santa Cruz Communicating Research Effectively (CORE) Workshop. Santa Cruz, CA.
-* 2025: Kavli Institute for Theoretical Physics (KITP), The Physics of Changing Polar Climate. Santa Barbara, CA. Oral presentation.
-* 2025: American Meteorological Society Denver Summit, 18th Conference on Polar Meteorology and Oceanography. Denver, CO. Oral presentation.
+* 2025: "AI4InSync - Optimizing Southern Ocean Observing Systems using AI." Kavli Institute for Theoretical Physics (KITP), The Physics of Changing Polar Climate. Santa Barbara, CA. Oral presentation.
+* 2025: "Probabilistic Forecasts of Interannual Arctic Sea Ice Extent with Data-Driven Statistical Models." American Meteorological Society Denver Summit, 18th Conference on Polar Meteorology and Oceanography. Denver, CO. Oral presentation.
 * 2025: Earth and Climate (ELIC) Seminar Series, Université catholique de Louvain. Louvain-la-Neuve, Belgium. Seminar.
-* 2024: Physical Oceanography Dissertation Symposium (PODS). Lihue, HI. Oral presentation.
+* 2024: "Freshwater Processes in the Upper Ocean." Physical Oceanography Dissertation Symposium (PODS). Lihue, HI. Oral presentation.
 * 2024: Workshop on the Role of Sea Ice and its Variability in the Climate System, International Centre for Theoretical Physics (ICTP). Trieste, Italy. Poster.
 * 2024: Earth and Climate (ELIC) Seminar Series, Université catholique de Louvain. Louvain-la-Neuve, Belgium. Seminar.
 * 2023: 54th International Liège Colloquium on Ocean Dynamics: Machine learning and data analysis in oceanography. Liège, Belgium. Poster.
-* 2023: Atmospheric and Ocean Sciences Forum, University of Colorado Boulder. Boulder, CO. Seminar.
-* 2023: Scientific Machine Learning Symposium. San Diego, CA. Poster.
-* 2023: ECCO Annual Meeting. Pasadena, CA. Oral presentation.
+* 2023: "Machine learning is a useful tool to predict and understand sea-ice motion in the Arctic." NCAR Sea Ice Modeling Group Meeting. Boulder, CO. Seminar.
+* 2023: "Machine learning is a useful tool to predict and understand sea-ice motion in the Arctic." Atmospheric and Ocean Sciences Forum, University of Colorado Boulder. Boulder, CO. Seminar.
+* 2023: "Machine learning is a useful tool to predict and understand sea-ice motion in the Arctic." Scientific Machine Learning Symposium. San Diego, CA. Poster.
+* 2023: "Machine learning is a useful surrogate model to parameterize and understand sea-ice motion in the Arctic." ECCO Annual Meeting. Pasadena, CA. Oral presentation.
 * 2022: 9th Annual FIRO Workshop. San Diego, CA. Poster.
 * 2022: Observing, Modeling, and Understanding the Circulation of the Arctic Ocean and Sub-Arctic Seas Workshop. Seattle, WA. Poster.
 * 2022: Center for Western Weather and Water Extremes (CW3E) Annual Meeting. San Diego, CA. Poster.
-* 2022: Ocean Salinity Conference. New York, NY. Oral presentation.
-* 2022: UCSD Jacobs School of Engineering Research Expo. San Diego, CA. Poster.
-* 2022: Ocean Sciences Meeting. Virtual. Oral presentation.
-* 2021: American Meteorological Society 101st Annual Meeting. Virtual. Oral presentation.
+* 2022: "Ocean surface salinity response to atmospheric river (AR) events in the California Current System." Ocean Salinity Conference. New York, NY. Oral presentation.
+* 2022: "Machine learning is a useful tool to predict and understand sea-ice dynamics in the Arctic." UCSD Jacobs School of Engineering Research Expo. San Diego, CA. Poster.
+* 2022: "Machine Learning for Evaluating the Drivers of Variability in Arctic Sea-Ice Dynamics to Improve Forecasting." Ocean Sciences Meeting. Virtual. Oral presentation.
+* 2021: "Ocean surface salinity response to atmospheric river events in the California Current System." American Meteorological Society 101st Annual Meeting. Virtual. Oral presentation.
 * 2016: Institute of Electrical and Electronics Engineers Global Humanitarian Technology Conference. Seattle, WA. Poster.
 
 Meetings and Workshops
