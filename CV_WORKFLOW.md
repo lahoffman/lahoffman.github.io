@@ -202,6 +202,22 @@ section_titles:
   personal_interests: Outside the Lab
 ```
 
+## Why pipes are written as `&#124;`
+
+Your `_config.yml` runs kramdown with `input: GFM`. That parser treats *any*
+line containing a `|` as a table — it does not require a header separator row.
+A literal pipe in the CV therefore renders as a stray bordered table on the
+website.
+
+The generator writes `&#124;` in markdown instead. Table detection scans raw
+text and sees no pipe, while `entity_output: as_char` turns the entity back
+into a real `|` in the final HTML — so the page shows the pipe you want with no
+table. The PDF is unaffected and uses `\textbar{}`.
+
+This happens automatically for every field, so you can type ordinary pipes in
+`cv_source.yml`. A build-time guard warns if a raw pipe ever reaches
+`_pages/cv.md`.
+
 ## Emoji and symbols
 
 The website renders any Unicode you like. `pdflatex` cannot typeset most

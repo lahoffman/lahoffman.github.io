@@ -130,8 +130,8 @@ Meetings and Workshops
 
 Teaching
 ======
-* Summer 2020 & 2021: Instructor, Climate Change and the Ocean | UC San Diego Academic Connections | 4-week online pre-college course; students accessed, plotted, analyzed and presented real oceanographic data
-* Sep. 2018–Dec. 2020: Teaching Assistant, Chemical Engineering | UC San Diego | Fluid mechanics (8 offerings), material and energy balances (1); 5 hrs/week of discussion sections
+* Summer 2020 & 2021: Instructor, Climate Change and the Ocean &#124; UC San Diego Academic Connections &#124; 4-week online pre-college course; students accessed, plotted, analyzed and presented real oceanographic data
+* Sep. 2018–Dec. 2020: Teaching Assistant, Chemical Engineering &#124; UC San Diego &#124; Fluid mechanics (8 offerings), material and energy balances (1); 5 hrs/week of discussion sections
 
 Guest lectures
 ======
@@ -140,17 +140,17 @@ Guest lectures
 
 Mentorship
 ======
-* Fall 2024–Spring 2025: Antonio Martinez Soares, Master's Student | Université catholique de Louvain
-* Summer 2021: Kayli Matsuyoshi, Undergraduate Student | Scripps Institution of Oceanography
-* Fall 2020–Spring 2021: Aniruddh Varadarajan, Undergraduate Student | University of California San Diego
+* Fall 2024–Spring 2025: Antonio Martinez Soares, Master's Student &#124; Université catholique de Louvain
+* Summer 2021: Kayli Matsuyoshi, Undergraduate Student &#124; Scripps Institution of Oceanography
+* Fall 2020–Spring 2021: Aniruddh Varadarajan, Undergraduate Student &#124; University of California San Diego
 
 Leadership
 ======
-* 2025–Present: Co-Lead | OASIS Working Group | International Antarctica InSync working group on AI-enabled approaches to Antarctic sea ice observing-system design and recommendations
+* 2025–Present: Co-Lead &#124; OASIS Working Group &#124; International Antarctica InSync working group on AI-enabled approaches to Antarctic sea ice observing-system design and recommendations
 
 Service
 ======
-* 2025: Student Poster Judge | AMS Conference on Polar Meteorology and Oceanography
+* 2025: Student Poster Judge &#124; AMS Conference on Polar Meteorology and Oceanography
 * Peer Review: Journal of Climate; Geophysical Research Letters; Journal of Geophysical Research: Atmospheres; npj; Environmental Modelling & Software; Open Science Europe.
 
 Honors and awards

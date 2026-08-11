@@ -119,11 +119,19 @@ def tex_escape(s):
     return s
 
 
+# This site runs kramdown with `input: GFM`, whose table detection fires on ANY
+# line containing a pipe -- no header row needed. A literal "|" anywhere in the
+# CV therefore renders as a stray one-cell table. Emitting the numeric entity
+# instead sidesteps table detection entirely (which scans raw text) while still
+# displaying a real pipe, because `entity_output: as_char` converts it back.
+MD_PIPE = "&#124;"
+
+
 def md_escape(s):
-    """Markdown needs almost nothing escaped here; normalise whitespace only."""
+    """Normalise whitespace, and neutralise pipes so kramdown sees no tables."""
     if s is None:
         return ""
-    return re.sub(r"\s+", " ", str(s)).strip()
+    return re.sub(r"\s+", " ", str(s)).strip().replace("|", MD_PIPE)
 
 
 def emph_md(s):
@@ -297,17 +305,19 @@ def generic_items(value):
     return items
 
 
-def compact_line(e):
+def compact_line(e, fmt="md"):
     """
     One-line entry, Gregory-style:  Who, Role | Org  -- or Label: text.
     Assembled from whichever of these keys are present.
     """
+    sep = " | "          # escaped downstream: \textbar{} in TeX, &#124; in md
     if e.get("label") and e.get("text"):
         return e["label"], md_escape(e["text"])
     left = ", ".join(x for x in (e.get("who"), e.get("role")) if x)
-    right = " | ".join(x for x in (e.get("org"), e.get("note"), e.get("text")) if x)
-    body = " | ".join(x for x in (left, right) if x)
-    return e.get("dates") or e.get("date") or "", md_escape(body)
+    right = sep.join(x for x in (e.get("org"), e.get("note"), e.get("text")) if x)
+    body = sep.join(x for x in (left, right) if x)
+    return e.get("dates") or e.get("date") or "", (md_escape(body) if fmt == "md"
+                                                   else body)
 
 
 def compact_entries(value):
@@ -444,9 +454,9 @@ def build_markdown(data):
             head(key)
             for t in compact_entries(data.get("teaching")):
                 if is_compact(data.get("teaching")):
-                    L.append("* %s: %s | %s" % (md_escape(t["dates"]),
-                                                md_escape(t["title"]),
-                                                md_escape(t.get("summary") or t["org"])))
+                    L.append("* %s: %s %s %s" % (
+                        md_escape(t["dates"]), md_escape(t["title"]),
+                        MD_PIPE, md_escape(t.get("summary") or t["org"])))
                 else:
                     L.append(md_entry(t["dates"], t["title"], t["org"],
                                       t["location"], bullets=t.get("bullets")))
@@ -748,7 +758,7 @@ def build_tex(data):
         elif key in ("mentorship", "leadership", "service"):
             head(key)
             for e in compact_entries(data.get(key)):
-                hint, body = compact_line(e)
+                hint, body = compact_line(e, "tex")
                 L.append(r"\cvitem{%s}{%s}" % (tex_escape(hint),
                                                tex_escape(body)))
 
@@ -848,7 +858,14 @@ def main():
         return 0
 
     if "md" in targets:
-        write("_pages/cv.md", build_markdown(data))
+        page = build_markdown(data)
+        # Regression guard: a raw pipe reaching the page would render as a
+        # stray table under kramdown's GFM parser (see MD_PIPE above).
+        if "|" in page:
+            bad = [l for l in page.split("\n") if "|" in l][:2]
+            warnings.append("a raw '|' reached _pages/cv.md and will render as a "
+                            "table on the website: %s" % " / ".join(bad))
+        write("_pages/cv.md", page)
     if "collections" in targets:
         build_collections(data)
     if "tex" in targets:
