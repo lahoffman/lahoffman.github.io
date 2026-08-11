@@ -50,6 +50,9 @@ section_order:
   - industry_experience
   - personal_interests
 
+# Separator between the parts of a compact one-line entry.
+compact_separator: "; "
+
 # Custom section headings. Anything not listed here uses a title derived from
 # the key (personal_interests -> "Personal Interests").
 section_titles:
@@ -389,6 +392,16 @@ talks:
     format: Oral presentation
 
   # ---- Contributed / conferences / workshops / seminars ----
+  - slug: 2026-ucsc-core-workshop
+    date: 2026-01-01
+    year: 2026
+    group: presentation
+    type: Workshop
+    title: Introduction to Machine Learning for Ocean Sciences
+    meeting: UC Santa Cruz Communicating Research Effectively (CORE) Workshop
+    venue: University of California Santa Cruz
+    location: Santa Cruz, CA
+
   - slug: 2025-antarctica-insync-planning-workshop
     date: 2025-01-05
     year: 2025
@@ -474,7 +487,7 @@ talks:
     group: meeting
     type: Conference presentation
     title: TODO  # <- the talk's own title
-    meeting: Mentoring Physical Oceanography Women to Increase Retention (MPOWIR)
+    meeting: Mentoring Physical Oceanography Women+ to Increase Retention (MPOWIR)
       Pattullo Conference
     venue: MPOWIR
     location: Warrenton, VA
@@ -652,7 +665,7 @@ teaching:
       date: 2020-06-01
       dates: Summer 2020 & 2021
       title: Instructor, Climate Change and the Ocean
-      summary: UC San Diego Academic Connections | 4-week online pre-college course;
+      summary: UC San Diego Academic Connections; 4-week online pre-college course;
         students accessed, plotted, analyzed and presented real oceanographic data
       type: Pre-college course
       org: University of California San Diego, Academic Connections
@@ -668,8 +681,8 @@ teaching:
       date: 2018-09-01
       dates: Sep. 2018–Dec. 2020
       title: Teaching Assistant, Chemical Engineering
-      summary: UC San Diego | Fluid mechanics (8 offerings), material and energy
-        balances (1); 5 hrs/week of discussion sections
+      summary: UC San Diego; fluid mechanics (8 offerings), material and energy
+        balances (1); 5 hrs/week of lecture and discussion sections
       type: Graduate and undergraduate courses
       org: University of California San Diego
       location: San Diego, CA
@@ -705,15 +718,15 @@ guest_lectures:
 mentorship:
   compact: true
   entries:
-    - dates: Fall 2024–Spring 2025
+    - dates: 2024–2025
       who: Antonio Martinez Soares
       role: Master's Student
       org: Université catholique de Louvain
-    - dates: Summer 2021
+    - dates: "2021"
       who: Kayli Matsuyoshi
       role: Undergraduate Student
       org: Scripps Institution of Oceanography
-    - dates: Fall 2020–Spring 2021
+    - dates: 2020–2021
       who: Aniruddh Varadarajan
       role: Undergraduate Student
       org: University of California San Diego
@@ -724,7 +737,7 @@ leadership:
   entries:
     - dates: 2025–Present
       role: Co-Lead
-      org: OASIS Working Group
+      org: OAISIS Working Group
       note: International Antarctica InSync working group on AI-enabled approaches
         to Antarctic sea ice observing-system design and recommendations
 
@@ -744,16 +757,16 @@ service:
 honors:
   - date: "2021"
     text: Interdisciplinary Research Award, UC San Diego.
-  - date: Mar.–Jun. 2020
+  - date: "2020"
     text: Teaching Assistant Commendation, "For Extraordinary Impact as a Teaching
       Assistant."
   - date: 2015–2016
     text: Achievement Rewards for College Scientists (ARCS), $5,000.
   - date: 2011–2016
     text: Alcala Award, Merit Based Scholarship, $20,000 annually.
-  - date: Fall 2015–Present
+  - date: 2015–Present
     text: Tau Beta Pi, Engineering Honor Society.
-  - date: Spring 2016–Present
+  - date: 2016–Present
     text: Pi Tau Sigma, Engineering Honor Society.
 
 # -----------------------------------------------------------------------------
@@ -762,12 +775,14 @@ activities:
     text: Invited to roundtable on climate modelling with the UN Secretary-General's
       Scientific Advisory Board.
   - date: 2025–Present
-    text: ORCAS Working Group Member.
+    text: ORCAS (Observational Requirements in the Context of AI prediction
+      Systems) Working Group Member.
   - date: 2022–2025
-    text: MPOWIR Mentor Group.
-  - date: Jan.–Dec. 2021
+    text: MPOWIR (Mentoring Physical Oceanography Women+ to Increase Retention)
+      Mentor Group.
+  - date: "2021"
     text: URGE Pod Member, Unlearning Racism in the Geosciences.
-  - date: Feb. 2013–Feb. 2015
+  - date: 2013–2015
     text: Engineers Without Borders, Fundraising Director.
 
 # -----------------------------------------------------------------------------

@@ -27,37 +27,37 @@ Education
 
 Research experience
 ======
-* Jan. 2026–Present: Postdoctoral Researcher
+* 01/2026–Present: Postdoctoral Researcher
   * University of California Santa Cruz, Santa Cruz, CA
   * Advisor: Xavier Prochaska
   * Characterizing density-based ocean fronts and associated submesoscale dynamics in high-resolution ocean model output
   * Developing scalable analysis and visualization workflows for large ocean model datasets
 
-* Feb. 2024–Dec. 2025: Postdoctoral Researcher
+* 02/2024–12/2025: Postdoctoral Researcher
   * Université catholique de Louvain, Louvain-la-Neuve, Belgium
   * Advisor: François Massonnet
   * Developed machine learning and explainable AI approaches to predict and understand rapid Arctic sea ice loss events on seasonal to interannual timescales
 
-* Oct. 2023–Jan. 2024: Postdoctoral Researcher
+* 10/2023–01/2024: Postdoctoral Researcher
   * Scripps Institution of Oceanography, UC San Diego, San Diego, CA
   * Advisor: Matt Mazloff
   * Implemented components of an operational forecast system for sea-ice motion prediction using machine learning
 
-* Jun. 2019–Sep. 2023: Graduate Researcher
+* 06/2019–09/2023: Graduate Researcher
   * Scripps Institution of Oceanography, UC San Diego, San Diego, CA
   * Advisor: Matt Mazloff
   * Investigated upper-ocean salinity response to atmospheric river events in the California Current System using observations and ocean model output
   * Developed machine learning and explainable AI approaches to predict and understand Arctic sea-ice dynamics from remote sensing data
 
-* Sep. 2018–Mar. 2019: Graduate Researcher
+* 09/2018–03/2019: Graduate Researcher
   * University of California San Diego, San Diego, CA
   * Advisor: Andrea Tao
 
-* Mar. 2018–Aug. 2018: Research Assistant
+* 03/2018–08/2018: Research Assistant
   * University of San Diego, San Diego, CA
   * Advisor: Truc Ngo
 
-* Mar. 2015–Jun. 2017: Undergraduate Research Assistant and Honors Thesis
+* 03/2015–06/2017: Undergraduate Research Assistant and Honors Thesis
   * University of San Diego, San Diego, CA
   * Advisor: Truc Ngo
 
@@ -101,6 +101,7 @@ Invited talks
 
 Presentations
 ======
+* 2026: "Introduction to Machine Learning for Ocean Sciences." UC Santa Cruz Communicating Research Effectively (CORE) Workshop. Santa Cruz, CA.
 * 2025: Kavli Institute for Theoretical Physics (KITP), The Physics of Changing Polar Climate. Santa Barbara, CA. Oral presentation.
 * 2025: American Meteorological Society Denver Summit, 18th Conference on Polar Meteorology and Oceanography. Denver, CO. Oral presentation.
 * 2025: Earth and Climate (ELIC) Seminar Series, Université catholique de Louvain. Louvain-la-Neuve, Belgium. Seminar.
@@ -123,56 +124,56 @@ Presentations
 Meetings and Workshops
 ======
 * 2025: Antarctica InSync International Science Planning Workshop. Frascati, Italy.
-* 2023: Mentoring Physical Oceanography Women to Increase Retention (MPOWIR) Pattullo Conference. Warrenton, VA.
+* 2023: Mentoring Physical Oceanography Women+ to Increase Retention (MPOWIR) Pattullo Conference. Warrenton, VA.
 * 2023: SeaSAR 2023. Svalbard, Norway.
 * 2020: International Atmospheric Rivers Conference Sponsored Symposium. Virtual.
 * 2020: Ocean Sciences Meeting. San Diego, CA.
 
 Teaching
 ======
-* Summer 2020 & 2021: Instructor, Climate Change and the Ocean &#124; UC San Diego Academic Connections &#124; 4-week online pre-college course; students accessed, plotted, analyzed and presented real oceanographic data
-* Sep. 2018–Dec. 2020: Teaching Assistant, Chemical Engineering &#124; UC San Diego &#124; Fluid mechanics (8 offerings), material and energy balances (1); 5 hrs/week of discussion sections
+* 2020 & 2021: Instructor, Climate Change and the Ocean; UC San Diego Academic Connections; 4-week online pre-college course; students accessed, plotted, analyzed and presented real oceanographic data
+* 09/2018–12/2020: Teaching Assistant, Chemical Engineering; UC San Diego; fluid mechanics (8 offerings), material and energy balances (1); 5 hrs/week of lecture and discussion sections
 
 Guest lectures
 ======
-* Winter 2025: Introduction to Machine Learning for Earth and Climate Science. *Forecast, Prediction, and Projection in Climate Science*. UCLouvain.
-* Winter 2023: Introduction to Machine Learning for Earth and Climate Science. *Analysis of Physical Oceanographic Data*. Scripps Institution of Oceanography.
+* 2025: Introduction to Machine Learning for Earth and Climate Science. *Forecast, Prediction, and Projection in Climate Science*. UCLouvain.
+* 2023: Introduction to Machine Learning for Earth and Climate Science. *Analysis of Physical Oceanographic Data*. Scripps Institution of Oceanography.
 
 Mentorship
 ======
-* Fall 2024–Spring 2025: Antonio Martinez Soares, Master's Student &#124; Université catholique de Louvain
-* Summer 2021: Kayli Matsuyoshi, Undergraduate Student &#124; Scripps Institution of Oceanography
-* Fall 2020–Spring 2021: Aniruddh Varadarajan, Undergraduate Student &#124; University of California San Diego
+* 2024–2025: Antonio Martinez Soares, Master's Student; Université catholique de Louvain
+* 2021: Kayli Matsuyoshi, Undergraduate Student; Scripps Institution of Oceanography
+* 2020–2021: Aniruddh Varadarajan, Undergraduate Student; University of California San Diego
 
 Leadership
 ======
-* 2025–Present: Co-Lead &#124; OASIS Working Group &#124; International Antarctica InSync working group on AI-enabled approaches to Antarctic sea ice observing-system design and recommendations
+* 2025–Present: Co-Lead; OAISIS Working Group; International Antarctica InSync working group on AI-enabled approaches to Antarctic sea ice observing-system design and recommendations
 
 Service
 ======
-* 2025: Student Poster Judge &#124; AMS Conference on Polar Meteorology and Oceanography
+* 2025: Student Poster Judge; AMS Conference on Polar Meteorology and Oceanography
 * Peer Review: Journal of Climate; Geophysical Research Letters; Journal of Geophysical Research: Atmospheres; npj; Environmental Modelling & Software; Open Science Europe.
 
 Honors and awards
 ======
 * 2021: Interdisciplinary Research Award, UC San Diego.
-* Mar.–Jun. 2020: Teaching Assistant Commendation, "For Extraordinary Impact as a Teaching Assistant."
+* 2020: Teaching Assistant Commendation, "For Extraordinary Impact as a Teaching Assistant."
 * 2015–2016: Achievement Rewards for College Scientists (ARCS), $5,000.
 * 2011–2016: Alcala Award, Merit Based Scholarship, $20,000 annually.
-* Fall 2015–Present: Tau Beta Pi, Engineering Honor Society.
-* Spring 2016–Present: Pi Tau Sigma, Engineering Honor Society.
+* 2015–Present: Tau Beta Pi, Engineering Honor Society.
+* 2016–Present: Pi Tau Sigma, Engineering Honor Society.
 
 Professional Activities and Outreach
 ======
 * 2026: Invited to roundtable on climate modelling with the UN Secretary-General's Scientific Advisory Board.
-* 2025–Present: ORCAS Working Group Member.
-* 2022–2025: MPOWIR Mentor Group.
-* Jan.–Dec. 2021: URGE Pod Member, Unlearning Racism in the Geosciences.
-* Feb. 2013–Feb. 2015: Engineers Without Borders, Fundraising Director.
+* 2025–Present: ORCAS (Observational Requirements in the Context of AI prediction Systems) Working Group Member.
+* 2022–2025: MPOWIR (Mentoring Physical Oceanography Women+ to Increase Retention) Mentor Group.
+* 2021: URGE Pod Member, Unlearning Racism in the Geosciences.
+* 2013–2015: Engineers Without Borders, Fundraising Director.
 
 Industry experience
 ======
-* Jun. 2016–Jun. 2018: Lead Engineer
+* 06/2016–06/2018: Lead Engineer
   * Primo Wind, Inc., San Diego, CA
   * Implemented design solutions for a small wind turbine system that improved power output and structural stability and optimized sustainability of materials and manufacturing
 

@@ -10,6 +10,6 @@ location: "Louvain-la-Neuve, Belgium"
 
 <!-- DO NOT EDIT. Generated from _data/cv_source.yml by scripts/build_cv.py. Run `make cv` after editing the YAML. -->
 
-Winter 2025.
+2025.
 
 Guest lecture delivered in the course *Forecast, Prediction, and Projection in Climate Science*.

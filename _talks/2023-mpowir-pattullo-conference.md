@@ -1,9 +1,9 @@
 ---
-title: "Mentoring Physical Oceanography Women to Increase Retention (MPOWIR) Pattullo Conference"
+title: "Mentoring Physical Oceanography Women+ to Increase Retention (MPOWIR) Pattullo Conference"
 collection: talks
 type: "Conference presentation"
 permalink: /talks/2023-mpowir-pattullo-conference
-venue: "Mentoring Physical Oceanography Women to Increase Retention (MPOWIR) Pattullo Conference"
+venue: "Mentoring Physical Oceanography Women+ to Increase Retention (MPOWIR) Pattullo Conference"
 date: 2023-01-07
 location: "Warrenton, VA"
 ---

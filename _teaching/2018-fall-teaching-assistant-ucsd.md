@@ -10,7 +10,7 @@ location: "San Diego, CA"
 
 <!-- DO NOT EDIT. Generated from _data/cv_source.yml by scripts/build_cv.py. Run `make cv` after editing the YAML. -->
 
-Sep. 2018–Dec. 2020.
+09/2018–12/2020.
 
 - Courses: introductory fluid mechanics (3 offerings), advanced fluid mechanics (5 offerings), and material and energy balances (1 offering).
 - Led five hours of weekly discussion sessions with supplementary lectures and problem-solving support.

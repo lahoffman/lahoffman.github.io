@@ -16,6 +16,16 @@
 \usepackage{enumitem}
 \setlist[itemize]{leftmargin=*, itemsep=0.15em, topsep=0.15em}
 
+% --- Keep section headings with their content -------------------------------
+% Without this, a \section can land at the very bottom of a page and its
+% entries start on the next one. \Needspace* reserves room for the heading plus
+% a few lines; if that much space is not left, the heading moves to the next
+% page instead of stranding itself.
+\usepackage{needspace}
+\usepackage{etoolbox}
+\pretocmd{\section}{\Needspace*{5\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace*{4\baselineskip}}{}{}
+
 
 \firstname{Lauren}
 \familyname{Hoffman}
@@ -33,38 +43,38 @@
 \cvitem{}{Polar science; sea ice; machine learning and explainable artificial intelligence; physical oceanography; air--sea--ice interactions; climate variability and predictability; AI-enabled approaches for polar observing applications.}
 
 \section{Education}
-\cventry{Sep. 2023}{Ph.D., Chemical Engineering}{University of California San Diego}{San Diego, CA}{}{}
-\cventry{Jun. 2019}{M.S., Chemical Engineering}{University of California San Diego}{San Diego, CA}{}{}
-\cventry{May 2016}{B.A./B.S., Mechanical Engineering}{University of San Diego}{San Diego, CA}{}{Mathematics and Chemistry minors; Honors Program. Dean's List, First Honors.}
+\cventry{09/2023}{Ph.D., Chemical Engineering}{University of California San Diego}{San Diego, CA}{}{}
+\cventry{06/2019}{M.S., Chemical Engineering}{University of California San Diego}{San Diego, CA}{}{}
+\cventry{05/2016}{B.A./B.S., Mechanical Engineering}{University of San Diego}{San Diego, CA}{}{Mathematics and Chemistry minors; Honors Program. Dean's List, First Honors.}
 
 \section{Research Experience}
-\cventry{Jan. 2026--Present}{Postdoctoral Researcher}{University of California Santa Cruz}{Santa Cruz, CA}{Advisor: Xavier Prochaska}{%
+\cventry{01/2026--Present}{Postdoctoral Researcher}{University of California Santa Cruz}{Santa Cruz, CA}{Advisor: Xavier Prochaska}{%
 \begin{itemize}
     \item Characterizing density-based ocean fronts and associated submesoscale dynamics in high-resolution ocean model output.
     \item Developing scalable analysis and visualization workflows for large ocean model datasets.
 \end{itemize}}
 
-\cventry{Feb. 2024--Dec. 2025}{Postdoctoral Researcher}{Université catholique de Louvain}{Louvain-la-Neuve, Belgium}{Advisor: François Massonnet}{%
+\cventry{02/2024--12/2025}{Postdoctoral Researcher}{Université catholique de Louvain}{Louvain-la-Neuve, Belgium}{Advisor: François Massonnet}{%
 \begin{itemize}
     \item Developed machine learning and explainable AI approaches to predict and understand rapid Arctic sea ice loss events on seasonal to interannual timescales.
 \end{itemize}}
 
-\cventry{Oct. 2023--Jan. 2024}{Postdoctoral Researcher}{Scripps Institution of Oceanography, UC San Diego}{San Diego, CA}{Advisor: Matt Mazloff}{%
+\cventry{10/2023--01/2024}{Postdoctoral Researcher}{Scripps Institution of Oceanography, UC San Diego}{San Diego, CA}{Advisor: Matt Mazloff}{%
 \begin{itemize}
     \item Implemented components of an operational forecast system for sea-ice motion prediction using machine learning.
 \end{itemize}}
 
-\cventry{Jun. 2019--Sep. 2023}{Graduate Researcher}{Scripps Institution of Oceanography, UC San Diego}{San Diego, CA}{Advisor: Matt Mazloff}{%
+\cventry{06/2019--09/2023}{Graduate Researcher}{Scripps Institution of Oceanography, UC San Diego}{San Diego, CA}{Advisor: Matt Mazloff}{%
 \begin{itemize}
     \item Investigated upper-ocean salinity response to atmospheric river events in the California Current System using observations and ocean model output.
     \item Developed machine learning and explainable AI approaches to predict and understand Arctic sea-ice dynamics from remote sensing data.
 \end{itemize}}
 
-\cventry{Sep. 2018--Mar. 2019}{Graduate Researcher}{University of California San Diego}{San Diego, CA}{Advisor: Andrea Tao}{}
+\cventry{09/2018--03/2019}{Graduate Researcher}{University of California San Diego}{San Diego, CA}{Advisor: Andrea Tao}{}
 
-\cventry{Mar. 2018--Aug. 2018}{Research Assistant}{University of San Diego}{San Diego, CA}{Advisor: Truc Ngo}{}
+\cventry{03/2018--08/2018}{Research Assistant}{University of San Diego}{San Diego, CA}{Advisor: Truc Ngo}{}
 
-\cventry{Mar. 2015--Jun. 2017}{Undergraduate Research Assistant and Honors Thesis}{University of San Diego}{San Diego, CA}{Advisor: Truc Ngo}{}
+\cventry{03/2015--06/2017}{Undergraduate Research Assistant and Honors Thesis}{University of San Diego}{San Diego, CA}{Advisor: Truc Ngo}{}
 
 
 \section{Technical Expertise}
@@ -98,6 +108,7 @@
 \cvitem{2022}{NOAA Science Seminar Series. Virtual. Oral presentation.}
 
 \section{Presentations}
+\cvitem{2026}{``Introduction to Machine Learning for Ocean Sciences.'' UC Santa Cruz Communicating Research Effectively (CORE) Workshop. Santa Cruz, CA.}
 \cvitem{2025}{Kavli Institute for Theoretical Physics (KITP), The Physics of Changing Polar Climate. Santa Barbara, CA. Oral presentation.}
 \cvitem{2025}{American Meteorological Society Denver Summit, 18th Conference on Polar Meteorology and Oceanography. Denver, CO. Oral presentation.}
 \cvitem{2025}{Earth and Climate (ELIC) Seminar Series, Université catholique de Louvain. Louvain-la-Neuve, Belgium. Seminar.}
@@ -119,48 +130,48 @@
 
 \section{Meetings and Workshops}
 \cvitem{2025}{Antarctica InSync International Science Planning Workshop. Frascati, Italy.}
-\cvitem{2023}{Mentoring Physical Oceanography Women to Increase Retention (MPOWIR) Pattullo Conference. Warrenton, VA.}
+\cvitem{2023}{Mentoring Physical Oceanography Women+ to Increase Retention (MPOWIR) Pattullo Conference. Warrenton, VA.}
 \cvitem{2023}{SeaSAR 2023. Svalbard, Norway.}
 \cvitem{2020}{International Atmospheric Rivers Conference Sponsored Symposium. Virtual.}
 \cvitem{2020}{Ocean Sciences Meeting. San Diego, CA.}
 
 \section{Teaching Experience}
-\cvitem{Summer 2020 \& 2021}{Instructor, Climate Change and the Ocean \&\#124; UC San Diego Academic Connections \&\#124; 4-week online pre-college course; students accessed, plotted, analyzed and presented real oceanographic data}
-\cvitem{Sep. 2018--Dec. 2020}{Teaching Assistant, Chemical Engineering \&\#124; UC San Diego \&\#124; Fluid mechanics (8 offerings), material and energy balances (1); 5 hrs/week of discussion sections}
+\cvitem{2020 \& 2021}{Instructor, Climate Change and the Ocean; UC San Diego Academic Connections; 4-week online pre-college course; students accessed, plotted, analyzed and presented real oceanographic data}
+\cvitem{09/2018--12/2020}{Teaching Assistant, Chemical Engineering; UC San Diego; fluid mechanics (8 offerings), material and energy balances (1); 5 hrs/week of lecture and discussion sections}
 
 \section{Guest Lectures}
-\cvitem{Winter 2025}{Introduction to Machine Learning for Earth and Climate Science. \textit{Forecast, Prediction, and Projection in Climate Science}. UCLouvain.}
-\cvitem{Winter 2023}{Introduction to Machine Learning for Earth and Climate Science. \textit{Analysis of Physical Oceanographic Data}. Scripps Institution of Oceanography.}
+\cvitem{2025}{Introduction to Machine Learning for Earth and Climate Science. \textit{Forecast, Prediction, and Projection in Climate Science}. UCLouvain.}
+\cvitem{2023}{Introduction to Machine Learning for Earth and Climate Science. \textit{Analysis of Physical Oceanographic Data}. Scripps Institution of Oceanography.}
 
 \section{Mentorship}
-\cvitem{Fall 2024--Spring 2025}{Antonio Martinez Soares, Master's Student \textbar{} Université catholique de Louvain}
-\cvitem{Summer 2021}{Kayli Matsuyoshi, Undergraduate Student \textbar{} Scripps Institution of Oceanography}
-\cvitem{Fall 2020--Spring 2021}{Aniruddh Varadarajan, Undergraduate Student \textbar{} University of California San Diego}
+\cvitem{2024--2025}{Antonio Martinez Soares, Master's Student; Université catholique de Louvain}
+\cvitem{2021}{Kayli Matsuyoshi, Undergraduate Student; Scripps Institution of Oceanography}
+\cvitem{2020--2021}{Aniruddh Varadarajan, Undergraduate Student; University of California San Diego}
 
 \section{Leadership}
-\cvitem{2025--Present}{Co-Lead \textbar{} OASIS Working Group \textbar{} International Antarctica InSync working group on AI-enabled approaches to Antarctic sea ice observing-system design and recommendations}
+\cvitem{2025--Present}{Co-Lead; OAISIS Working Group; International Antarctica InSync working group on AI-enabled approaches to Antarctic sea ice observing-system design and recommendations}
 
 \section{Service}
-\cvitem{2025}{Student Poster Judge \textbar{} AMS Conference on Polar Meteorology and Oceanography}
+\cvitem{2025}{Student Poster Judge; AMS Conference on Polar Meteorology and Oceanography}
 \cvitem{Peer Review}{Journal of Climate; Geophysical Research Letters; Journal of Geophysical Research: Atmospheres; npj; Environmental Modelling \& Software; Open Science Europe.}
 
 \section{Honors and Awards}
 \cvitem{2021}{Interdisciplinary Research Award, UC San Diego.}
-\cvitem{Mar.--Jun. 2020}{Teaching Assistant Commendation, ``For Extraordinary Impact as a Teaching Assistant.''}
+\cvitem{2020}{Teaching Assistant Commendation, ``For Extraordinary Impact as a Teaching Assistant.''}
 \cvitem{2015--2016}{Achievement Rewards for College Scientists (ARCS), \$5,000.}
 \cvitem{2011--2016}{Alcala Award, Merit Based Scholarship, \$20,000 annually.}
-\cvitem{Fall 2015--Present}{Tau Beta Pi, Engineering Honor Society.}
-\cvitem{Spring 2016--Present}{Pi Tau Sigma, Engineering Honor Society.}
+\cvitem{2015--Present}{Tau Beta Pi, Engineering Honor Society.}
+\cvitem{2016--Present}{Pi Tau Sigma, Engineering Honor Society.}
 
 \section{Professional Activities and Outreach}
 \cvitem{2026}{Invited to roundtable on climate modelling with the UN Secretary-General's Scientific Advisory Board.}
-\cvitem{2025--Present}{ORCAS Working Group Member.}
-\cvitem{2022--2025}{MPOWIR Mentor Group.}
-\cvitem{Jan.--Dec. 2021}{URGE Pod Member, Unlearning Racism in the Geosciences.}
-\cvitem{Feb. 2013--Feb. 2015}{Engineers Without Borders, Fundraising Director.}
+\cvitem{2025--Present}{ORCAS (Observational Requirements in the Context of AI prediction Systems) Working Group Member.}
+\cvitem{2022--2025}{MPOWIR (Mentoring Physical Oceanography Women+ to Increase Retention) Mentor Group.}
+\cvitem{2021}{URGE Pod Member, Unlearning Racism in the Geosciences.}
+\cvitem{2013--2015}{Engineers Without Borders, Fundraising Director.}
 
 \section{Industry Experience}
-\cventry{Jun. 2016--Jun. 2018}{Lead Engineer}{Primo Wind, Inc.}{San Diego, CA}{}{%
+\cventry{06/2016--06/2018}{Lead Engineer}{Primo Wind, Inc.}{San Diego, CA}{}{%
 \begin{itemize}
     \item Implemented design solutions for a small wind turbine system that improved power output and structural stability and optimized sustainability of materials and manufacturing.
 \end{itemize}}

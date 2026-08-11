@@ -48,6 +48,60 @@ WARNING_TEX = (
 written = []
 
 
+# ----------------------------------------------------------- date display ----
+# Display dates as MM/YYYY. Seasons and terms carry no month, so they collapse
+# to the bare year, per the rule "if month is not provided just use YYYY".
+# Set `date_style: words` in cv_source.yml to keep the original wording.
+MONTHS = {"jan": "01", "feb": "02", "mar": "03", "apr": "04", "may": "05",
+          "jun": "06", "jul": "07", "aug": "08", "sep": "09", "sept": "09",
+          "oct": "10", "nov": "11", "dec": "12"}
+SEASONS = ("Fall", "Autumn", "Winter", "Spring", "Summer")
+MONTH_RE = r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?"
+ISO_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+
+
+def format_date_hint(text):
+    """'Oct. 2023' -> '10/2023';  'Mar.-Jun. 2020' -> '03/2020-06/2020';
+       'Fall 2024-Spring 2025' -> '2024-2025';  '2011-2016' -> unchanged."""
+    if text is None:
+        return text
+    out = str(text)
+    if ISO_RE.match(out.strip()):        # Jekyll's own date field -- leave alone
+        return out
+
+    # "Mar.-Jun. 2020" -- two months sharing one trailing year.
+    def pair(m):
+        a, b, year = MONTHS[m.group(1).lower()], MONTHS[m.group(2).lower()], m.group(3)
+        return "%s/%s\u2013%s/%s" % (a, year, b, year)
+    out = re.sub(MONTH_RE + r"\s*[\u2013\u2014-]\s*" + MONTH_RE + r"\s+(\d{4})",
+                 pair, out)
+
+    # "Oct. 2023" -> "10/2023"
+    out = re.sub(MONTH_RE + r"\s+(\d{4})",
+                 lambda m: "%s/%s" % (MONTHS[m.group(1).lower()], m.group(2)), out)
+
+    # Seasons and terms have no month: drop the word, keep the year.
+    for word in SEASONS:
+        out = re.sub(r"\b%s\s+(?=\d{4})" % word, "", out)
+    return re.sub(r"\s+", " ", out).strip()
+
+
+def normalise_dates(node, enabled=True):
+    """Rewrite every display-date field in the loaded YAML, in place."""
+    if not enabled:
+        return node
+    if isinstance(node, dict):
+        for k, v in node.items():
+            if k in ("dates", "term", "date") and isinstance(v, str):
+                node[k] = format_date_hint(v)
+            else:
+                normalise_dates(v)
+    elif isinstance(node, list):
+        for item in node:
+            normalise_dates(item)
+    return node
+
+
 # ---------------------------------------------------------------- helpers ----
 def write(path, content):
     """Write UTF-8 text, creating parent dirs, and record it in the manifest."""
@@ -127,11 +181,20 @@ def tex_escape(s):
 MD_PIPE = "&#124;"
 
 
-def md_escape(s):
-    """Normalise whitespace, and neutralise pipes so kramdown sees no tables."""
+def norm_ws(s):
+    """Collapse whitespace. Format-neutral -- safe before either escaper."""
     if s is None:
         return ""
-    return re.sub(r"\s+", " ", str(s)).strip().replace("|", MD_PIPE)
+    return re.sub(r"\s+", " ", str(s)).strip()
+
+
+def md_escape(s):
+    """Whitespace + neutralise pipes so kramdown sees no tables. MARKDOWN ONLY.
+
+    Never feed the result to tex_escape: the entity's '#' would be escaped and
+    the PDF would print a literal "&#124;".
+    """
+    return norm_ws(s).replace("|", MD_PIPE)
 
 
 def emph_md(s):
@@ -305,19 +368,26 @@ def generic_items(value):
     return items
 
 
-def compact_line(e, fmt="md"):
+DEFAULT_SEPARATOR = "; "
+
+
+def separator(data):
+    """Separator between parts of a compact entry. `compact_separator:` in YAML."""
+    return data.get("compact_separator", DEFAULT_SEPARATOR)
+
+
+def compact_line(e, fmt="md", sep=DEFAULT_SEPARATOR):
     """
     One-line entry, Gregory-style:  Who, Role | Org  -- or Label: text.
     Assembled from whichever of these keys are present.
     """
-    sep = " | "          # escaped downstream: \textbar{} in TeX, &#124; in md
+    esc = md_escape if fmt == "md" else norm_ws
     if e.get("label") and e.get("text"):
-        return e["label"], md_escape(e["text"])
+        return e["label"], esc(e["text"])
     left = ", ".join(x for x in (e.get("who"), e.get("role")) if x)
     right = sep.join(x for x in (e.get("org"), e.get("note"), e.get("text")) if x)
     body = sep.join(x for x in (left, right) if x)
-    return e.get("dates") or e.get("date") or "", (md_escape(body) if fmt == "md"
-                                                   else body)
+    return e.get("dates") or e.get("date") or "", esc(body)
 
 
 def compact_entries(value):
@@ -454,9 +524,9 @@ def build_markdown(data):
             head(key)
             for t in compact_entries(data.get("teaching")):
                 if is_compact(data.get("teaching")):
-                    L.append("* %s: %s %s %s" % (
+                    L.append("* %s: %s%s%s" % (
                         md_escape(t["dates"]), md_escape(t["title"]),
-                        MD_PIPE, md_escape(t.get("summary") or t["org"])))
+                        separator(data), md_escape(t.get("summary") or t["org"])))
                 else:
                     L.append(md_entry(t["dates"], t["title"], t["org"],
                                       t["location"], bullets=t.get("bullets")))
@@ -474,7 +544,7 @@ def build_markdown(data):
         elif key in ("mentorship", "leadership", "service"):
             head(key)
             for e in compact_entries(data.get(key)):
-                hint, body = compact_line(e)
+                hint, body = compact_line(e, "md", separator(data))
                 L.append("* %s: %s" % (md_escape(hint), body) if hint
                          else "* %s" % body)
             L.append("")
@@ -634,7 +704,7 @@ def tex_itemize(bullets):
         return "{}"
     lines = ["{%", r"\begin{itemize}"]
     for bl in bullets:
-        lines.append(r"    \item %s" % tex_escape(md_escape(bl)))
+        lines.append(r"    \item %s" % tex_escape(norm_ws(bl)))
     lines += [r"\end{itemize}}"]
     return "\n".join(lines)
 
@@ -682,11 +752,11 @@ def build_tex(data):
             head(key)
             for hint, text in generic_items(data.get(key)):
                 L.append(r"\cvitem{%s}{%s}" % (tex_escape(hint),
-                                               tex_escape(md_escape(text))))
+                                               tex_escape(norm_ws(text))))
 
         elif key == "research_interests":
             head(key)
-            L.append(r"\cvitem{}{%s}" % tex_escape(md_escape(data["research_interests"])))
+            L.append(r"\cvitem{}{%s}" % tex_escape(norm_ws(data["research_interests"])))
 
         elif key == "education":
             head(key)
@@ -708,7 +778,7 @@ def build_tex(data):
             head(key)
             for t in data["technical_expertise"]:
                 L.append(r"\cvitem{%s}{%s}" % (tex_escape(t["label"]),
-                                               tex_escape(md_escape(t["text"]))))
+                                               tex_escape(norm_ws(t["text"]))))
 
         elif key == "publications":
             head(key)
@@ -725,7 +795,7 @@ def build_tex(data):
         elif key == "patents":
             head(key)
             for p in data.get("patents", []):
-                txt = tex_escape(md_escape(p["text"]))
+                txt = tex_escape(norm_ws(p["text"]))
                 if p.get("url"):
                     txt += r" \url{%s}." % p["url"]
                 L.append(r"\cvitem{%s}{%s}" % (p["year"], txt))
@@ -740,9 +810,10 @@ def build_tex(data):
             for t in compact_entries(data.get("teaching")):
                 if is_compact(data.get("teaching")):
                     # Join first, escape once, so the pipe becomes \textbar{}.
-                    body = "%s | %s" % (t["title"], t.get("summary") or t["org"])
+                    body = "%s%s%s" % (t["title"], separator(data),
+                                       t.get("summary") or t["org"])
                     L.append(r"\cvitem{%s}{%s}" % (tex_escape(t["dates"]),
-                                                   tex_escape(md_escape(body))))
+                                                   tex_escape(norm_ws(body))))
                 else:
                     L.append(cventry(t["dates"], t["title"], t["org"],
                                      t["location"], None, t.get("bullets")))
@@ -758,7 +829,7 @@ def build_tex(data):
         elif key in ("mentorship", "leadership", "service"):
             head(key)
             for e in compact_entries(data.get(key)):
-                hint, body = compact_line(e, "tex")
+                hint, body = compact_line(e, "tex", separator(data))
                 L.append(r"\cvitem{%s}{%s}" % (tex_escape(hint),
                                                tex_escape(body)))
 
@@ -766,7 +837,7 @@ def build_tex(data):
             head(key)
             for h in data.get(key, []):
                 L.append(r"\cvitem{%s}{%s}" % (tex_escape(h["date"]),
-                                               tex_escape(md_escape(h["text"]))))
+                                               tex_escape(norm_ws(h["text"]))))
 
         L.append("")
 
@@ -843,6 +914,7 @@ def main():
     with io.open(SOURCE, encoding="utf-8") as fh:
         data = yaml.safe_load(fh)
 
+    normalise_dates(data, data.get("date_style", "numeric") == "numeric")
     warnings = validate(data)
 
     if args.check:

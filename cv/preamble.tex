@@ -12,3 +12,13 @@
 \usepackage{xurl}
 \usepackage{enumitem}
 \setlist[itemize]{leftmargin=*, itemsep=0.15em, topsep=0.15em}
+
+% --- Keep section headings with their content -------------------------------
+% Without this, a \section can land at the very bottom of a page and its
+% entries start on the next one. \Needspace* reserves room for the heading plus
+% a few lines; if that much space is not left, the heading moves to the next
+% page instead of stranding itself.
+\usepackage{needspace}
+\usepackage{etoolbox}
+\pretocmd{\section}{\Needspace*{5\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace*{4\baselineskip}}{}{}
