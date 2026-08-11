@@ -102,6 +102,7 @@ def tex_escape(s):
         ("}", r"\}"),
         ("~", r"\textasciitilde{}"),
         ("^", r"\textasciicircum{}"),
+        ("|", r"\textbar{}"),   # a bare | renders as an em dash in TeX
     ):
         s = s.replace(a, b)
     s = s.replace("–", "--").replace("—", "---")
@@ -155,9 +156,33 @@ def pub_tail(p, fmt):
     return tail
 
 
-def pub_reference(p, fmt):
+DEFAULT_BOLD_NAMES = ["Hoffman, L.", "L. Hoffman"]
+
+
+def bold_names(data):
+    """Names to embolden in author lists; override with `basics.bold_name:`."""
+    configured = (data.get("basics") or {}).get("bold_name")
+    if not configured:
+        return DEFAULT_BOLD_NAMES
+    return configured if isinstance(configured, list) else [configured]
+
+
+def bold_own_name(authors, fmt, names):
+    """Wrap the CV owner's name in bold wherever it appears in an author list."""
+    # Longest first, so "Hoffman, L." wins over a bare "Hoffman".
+    for name in sorted(names, key=len, reverse=True):
+        marked = ("**%s**" % name) if fmt == "md" else (r"\textbf{%s}" % name)
+        if name in authors and marked not in authors:
+            authors = authors.replace(name, marked)
+            break
+    return authors
+
+
+def pub_reference(p, fmt, names=None):
     esc = tex_escape if fmt == "tex" else md_escape
-    ref = "%s %s" % (esc(p["authors"]), esc(p["title"]))
+    # Escape first, then bold, so the bold markup itself is never escaped.
+    authors = bold_own_name(esc(p["authors"]), fmt, names or DEFAULT_BOLD_NAMES)
+    ref = "%s %s" % (authors, esc(p["title"]))
     tail = pub_tail(p, fmt)
     return ref + (" " + tail if tail else "")
 
@@ -202,13 +227,27 @@ def split_pubs(data):
     return sorted(first, key=key), sorted(co, key=key)
 
 
-def split_talks(data):
-    """Newest first, using the full date so within-year order is controllable."""
-    talks = data.get("talks", [])
-    key = lambda t: _desc(str(t.get("date", "")))
-    invited = sorted([t for t in talks if t.get("group") == "invited"], key=key)
-    contributed = sorted([t for t in talks if t.get("group") != "invited"], key=key)
-    return invited, contributed
+DEFAULT_TALK_SECTIONS = {"invited_talks": "invited",
+                         "conference_presentations": "contributed"}
+
+
+def talk_sections(data):
+    return data.get("talk_sections") or DEFAULT_TALK_SECTIONS
+
+
+def talks_for_section(data, section_key):
+    """Talks whose `group:` maps to this section, newest first."""
+    group = talk_sections(data).get(section_key)
+    if group is None:
+        return []
+    known = set(talk_sections(data).values())
+    picked = [t for t in data.get("talks", [])
+              # An unrecognised group falls into the last section rather than
+              # vanishing silently.
+              if t.get("group") == group
+              or (t.get("group") not in known
+                  and group == list(talk_sections(data).values())[-1])]
+    return sorted(picked, key=lambda t: _desc(str(t.get("date", ""))))
 
 
 def _desc(s):
@@ -258,6 +297,30 @@ def generic_items(value):
     return items
 
 
+def compact_line(e):
+    """
+    One-line entry, Gregory-style:  Who, Role | Org  -- or Label: text.
+    Assembled from whichever of these keys are present.
+    """
+    if e.get("label") and e.get("text"):
+        return e["label"], md_escape(e["text"])
+    left = ", ".join(x for x in (e.get("who"), e.get("role")) if x)
+    right = " | ".join(x for x in (e.get("org"), e.get("note"), e.get("text")) if x)
+    body = " | ".join(x for x in (left, right) if x)
+    return e.get("dates") or e.get("date") or "", md_escape(body)
+
+
+def compact_entries(value):
+    """A section written as {compact: true, entries: [...]} -> list of entries."""
+    if isinstance(value, dict):
+        return value.get("entries", [])
+    return value or []
+
+
+def is_compact(value):
+    return isinstance(value, dict) and value.get("compact", True)
+
+
 # ------------------------------------------------------------ markdown CV ----
 MD_SECTION_TITLES = {
     "research_interests": "Research interests",
@@ -271,7 +334,9 @@ MD_SECTION_TITLES = {
     "conference_presentations": "Conference presentations, workshops, and seminars",
     "teaching": "Teaching",
     "guest_lectures": "Guest lectures",
-    "service": "Leadership, service, and mentorship",
+    "mentorship": "Mentorship",
+    "leadership": "Leadership",
+    "service": "Service",
     "honors": "Honors and awards",
     "activities": "Activities",
 }
@@ -313,7 +378,7 @@ def build_markdown(data):
         L.extend([title_for(data, key, MD_SECTION_TITLES), "=" * 6])
 
     for key in data["section_order"]:
-        if key not in MD_SECTION_TITLES:
+        if key not in MD_SECTION_TITLES and key not in talk_sections(data):
             # Unknown key -> render generically. No code change needed to add one.
             head(key)
             for hint, text in generic_items(data.get(key)):
@@ -357,7 +422,7 @@ def build_markdown(data):
                 L.extend([label, "-" * 6])
                 for p in group:
                     year = "*In progress*" if p.get("status") == "in_progress" else str(p["year"])
-                    L.append("* %s: %s" % (year, pub_reference(p, "md")))
+                    L.append("* %s: %s" % (year, pub_reference(p, "md", bold_names(data))))
                 L.append("")
 
         elif key == "patents":
@@ -369,19 +434,24 @@ def build_markdown(data):
                 L.append(line)
             L.append("")
 
-        elif key in ("invited_talks", "conference_presentations"):
+        elif key in talk_sections(data):
             head(key)
-            invited, contributed = split_talks(data)
-            for t in (invited if key == "invited_talks" else contributed):
+            for t in talks_for_section(data, key):
                 L.append("* %s: %s" % (t["year"], talk_line(t, "md")))
             L.append("")
 
         elif key == "teaching":
             head(key)
-            for t in data.get("teaching", []):
-                L.append(md_entry(t["dates"], t["title"], t["org"], t["location"],
-                                  bullets=t.get("bullets")))
-                L.append("")
+            for t in compact_entries(data.get("teaching")):
+                if is_compact(data.get("teaching")):
+                    L.append("* %s: %s | %s" % (md_escape(t["dates"]),
+                                                md_escape(t["title"]),
+                                                md_escape(t.get("summary") or t["org"])))
+                else:
+                    L.append(md_entry(t["dates"], t["title"], t["org"],
+                                      t["location"], bullets=t.get("bullets")))
+                    L.append("")
+            L.append("")
 
         elif key == "guest_lectures":
             head(key)
@@ -391,19 +461,12 @@ def build_markdown(data):
                     md_escape(g["course"]), md_escape(g["org"])))
             L.append("")
 
-        elif key == "service":
+        elif key in ("mentorship", "leadership", "service"):
             head(key)
-            s = data["service"]
-            for r in s.get("roles", []):
-                L.append("* %s: %s, %s" % (md_escape(r["dates"]), md_escape(r["title"]), md_escape(r["org"])))
-                for bl in r.get("bullets", []):
-                    L.append("  * %s" % md_escape(bl).rstrip("."))
-            for it in s.get("items", []):
-                L.append("* %s: %s" % (md_escape(it["label"]), md_escape(it["text"])))
-            if s.get("mentorship"):
-                L.append("* Mentorship:")
-                for m in s["mentorship"]:
-                    L.append("  * %s" % md_escape(m).rstrip("."))
+            for e in compact_entries(data.get(key)):
+                hint, body = compact_line(e)
+                L.append("* %s: %s" % (md_escape(hint), body) if hint
+                         else "* %s" % body)
             L.append("")
 
         elif key in ("honors", "activities"):
@@ -475,7 +538,7 @@ def build_collections(data):
         write("_talks/%s.md" % t["slug"], "\n".join(fm))
 
     # --- teaching (courses + guest lectures both live here) ---
-    for t in data.get("teaching", []):
+    for t in compact_entries(data.get("teaching")):
         body = "\n".join("- %s" % md_escape(b) for b in t.get("bullets", []))
         fm = [
             "---",
@@ -532,7 +595,9 @@ TEX_SECTION_TITLES = {
     "conference_presentations": "Conference Presentations, Workshops, and Seminars",
     "teaching": "Teaching Experience",
     "guest_lectures": "Guest Lectures",
-    "service": "Leadership, Service, and Mentorship",
+    "mentorship": "Mentorship",
+    "leadership": "Leadership",
+    "service": "Service",
     "honors": "Honors and Awards",
     "activities": "Activities",
 }
@@ -602,7 +667,7 @@ def build_tex(data):
         L.append(r"\section{%s}" % title_for(data, key, TEX_SECTION_TITLES, True))
 
     for key in data["section_order"]:
-        if key not in TEX_SECTION_TITLES:
+        if key not in TEX_SECTION_TITLES and key not in talk_sections(data):
             # Unknown key -> render generically. No code change needed to add one.
             head(key)
             for hint, text in generic_items(data.get(key)):
@@ -645,7 +710,7 @@ def build_tex(data):
                 L.append(r"\subsection{%s}" % label)
                 for p in group:
                     year = "In progress" if p.get("status") == "in_progress" else str(p["year"])
-                    L.append(r"\cvitem{%s}{%s}" % (tex_escape(year), pub_reference(p, "tex")))
+                    L.append(r"\cvitem{%s}{%s}" % (tex_escape(year), pub_reference(p, "tex", bold_names(data))))
 
         elif key == "patents":
             head(key)
@@ -655,18 +720,23 @@ def build_tex(data):
                     txt += r" \url{%s}." % p["url"]
                 L.append(r"\cvitem{%s}{%s}" % (p["year"], txt))
 
-        elif key in ("invited_talks", "conference_presentations"):
+        elif key in talk_sections(data):
             head(key)
-            invited, contributed = split_talks(data)
-            for t in (invited if key == "invited_talks" else contributed):
+            for t in talks_for_section(data, key):
                 L.append(r"\cvitem{%s}{%s}" % (t["year"], talk_line(t, "tex")))
 
         elif key == "teaching":
             head(key)
-            for t in data.get("teaching", []):
-                L.append(cventry(t["dates"], t["title"], t["org"], t["location"],
-                                 None, t.get("bullets")))
-                L.append("")
+            for t in compact_entries(data.get("teaching")):
+                if is_compact(data.get("teaching")):
+                    # Join first, escape once, so the pipe becomes \textbar{}.
+                    body = "%s | %s" % (t["title"], t.get("summary") or t["org"])
+                    L.append(r"\cvitem{%s}{%s}" % (tex_escape(t["dates"]),
+                                                   tex_escape(md_escape(body))))
+                else:
+                    L.append(cventry(t["dates"], t["title"], t["org"],
+                                     t["location"], None, t.get("bullets")))
+                    L.append("")
 
         elif key == "guest_lectures":
             head(key)
@@ -675,17 +745,12 @@ def build_tex(data):
                     tex_escape(g["term"]), tex_escape(g["title"]),
                     tex_escape(g["course"]), tex_escape(g["org"])))
 
-        elif key == "service":
+        elif key in ("mentorship", "leadership", "service"):
             head(key)
-            s = data["service"]
-            for r in s.get("roles", []):
-                L.append(cventry(r["dates"], r["title"], r["org"], "", None, r.get("bullets")))
-            for it in s.get("items", []):
-                L.append(r"\cvitem{%s}{%s}" % (tex_escape(it["label"]),
-                                               tex_escape(md_escape(it["text"]))))
-            for i, m in enumerate(s.get("mentorship", [])):
-                L.append(r"\cvitem{%s}{%s}" % ("Mentorship" if i == 0 else "",
-                                               tex_escape(md_escape(m))))
+            for e in compact_entries(data.get(key)):
+                hint, body = compact_line(e)
+                L.append(r"\cvitem{%s}{%s}" % (tex_escape(hint),
+                                               tex_escape(body)))
 
         elif key in ("honors", "activities"):
             head(key)
@@ -720,7 +785,8 @@ def prune_stale():
 
 # Keys that are configuration or are consumed by another section, so their
 # absence from section_order is expected rather than a mistake.
-NOT_SECTIONS = {"basics", "section_order", "section_titles", "talks"}
+NOT_SECTIONS = {"basics", "section_order", "section_titles", "talks",
+                "talk_sections"}
 
 
 def validate(data):
@@ -732,13 +798,13 @@ def validate(data):
     for key in data:
         if key in NOT_SECTIONS or key in order:
             continue
-        if key in ("invited_talks", "conference_presentations"):
+        if key in talk_sections(data):
             continue
         msgs.append(
             "'%s' exists in cv_source.yml but is NOT in section_order, so it will "
             "not appear anywhere. Add it to section_order to show it." % key)
 
-    virtual = {"invited_talks", "conference_presentations"}
+    virtual = set(talk_sections(data))
     for key in order:
         if key not in data and key not in virtual:
             msgs.append("section_order lists '%s', but there is no such key in "

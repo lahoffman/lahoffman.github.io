@@ -34,18 +34,33 @@ section_order:
   - research_interests
   - education
   - research_experience
-  - industry_experience
   - technical_expertise
   - publications
   - patents
   - invited_talks
-  - conference_presentations
+  - presentations
+  - meetings_workshops
   - teaching
   - guest_lectures
+  - mentorship
+  - leadership
   - service
   - honors
   - activities
+  - industry_experience
   - personal_interests
+
+# Custom section headings. Anything not listed here uses a title derived from
+# the key (personal_interests -> "Personal Interests").
+section_titles:
+  meetings_workshops: Meetings and Workshops
+  activities: Professional Activities and Outreach
+
+# Which `group:` value in the talks list feeds which section above.
+talk_sections:
+  invited_talks: invited
+  presentations: presentation
+  meetings_workshops: meeting
 
 # -----------------------------------------------------------------------------
 research_interests: >-
@@ -304,7 +319,8 @@ patents:
 #            If a talk genuinely had no distinct title, delete the whole
 #            `title:` line -- the entry then renders from `meeting:` alone.
 #   meeting: the conference, workshop, or seminar series it was given at.
-#   group:   invited | contributed  -> which CV section it lands in
+#   group:   invited | presentation | meeting -> which CV section it lands
+#            in (mapped by `talk_sections:` near the top of this file)
 #   format:  Oral presentation | Poster | Seminar
 #   site:    true (default)         -> also generate a _talks/ entry
 #   date:    YYYY-MM-DD             -> required by Jekyll. Months/days below are
@@ -373,10 +389,20 @@ talks:
     format: Oral presentation
 
   # ---- Contributed / conferences / workshops / seminars ----
+  - slug: 2025-antarctica-insync-planning-workshop
+    date: 2025-01-05
+    year: 2025
+    group: meeting
+    type: Workshop
+    title: TODO  # <- the talk's own title
+    meeting: Antarctica InSync International Science Planning Workshop
+    venue: Antarctica InSync
+    location: Frascati, Italy
+
   - slug: 2025-kitp-changing-polar-climate
     date: 2025-01-04
     year: 2025
-    group: contributed
+    group: presentation
     type: Conference presentation
     title: TODO  # <- the talk's own title
     meeting: Kavli Institute for Theoretical Physics (KITP), The Physics of Changing
@@ -388,7 +414,7 @@ talks:
   - slug: 2025-ams-denver-summit
     date: 2025-01-03
     year: 2025
-    group: contributed
+    group: presentation
     type: Conference presentation
     title: TODO  # <- the talk's own title
     meeting: American Meteorological Society Denver Summit, 18th Conference on Polar
@@ -400,7 +426,7 @@ talks:
   - slug: 2025-elic-seminar-series
     date: 2025-01-02
     year: 2025
-    group: contributed
+    group: presentation
     type: Seminar
     title: TODO  # <- the talk's own title
     meeting: Earth and Climate (ELIC) Seminar Series, Université catholique de Louvain
@@ -411,7 +437,7 @@ talks:
   - slug: 2024-pods
     date: 2024-01-04
     year: 2024
-    group: contributed
+    group: presentation
     type: Conference presentation
     title: TODO  # <- the talk's own title
     meeting: Physical Oceanography Dissertation Symposium (PODS)
@@ -422,7 +448,7 @@ talks:
   - slug: 2024-ictp-sea-ice-workshop
     date: 2024-01-03
     year: 2024
-    group: contributed
+    group: presentation
     type: Poster
     title: TODO  # <- the talk's own title
     meeting: Workshop on the Role of Sea Ice and its Variability in the Climate
@@ -434,7 +460,7 @@ talks:
   - slug: 2024-elic-seminar-series
     date: 2024-01-02
     year: 2024
-    group: contributed
+    group: presentation
     type: Seminar
     title: TODO  # <- the talk's own title
     meeting: Earth and Climate (ELIC) Seminar Series, Université catholique de Louvain
@@ -445,7 +471,7 @@ talks:
   - slug: 2023-mpowir-pattullo-conference
     date: 2023-01-07
     year: 2023
-    group: contributed
+    group: meeting
     type: Conference presentation
     title: TODO  # <- the talk's own title
     meeting: Mentoring Physical Oceanography Women to Increase Retention (MPOWIR)
@@ -456,7 +482,7 @@ talks:
   - slug: 2023-liege-colloquium
     date: 2023-01-06
     year: 2023
-    group: contributed
+    group: presentation
     type: Poster
     title: TODO  # <- the talk's own title
     meeting: "54th International Liège Colloquium on Ocean Dynamics: Machine learning
@@ -468,7 +494,7 @@ talks:
   - slug: 2023-seasar
     date: 2023-01-05
     year: 2023
-    group: contributed
+    group: meeting
     type: Conference presentation
     title: TODO  # <- the talk's own title
     meeting: SeaSAR 2023
@@ -478,7 +504,7 @@ talks:
   - slug: 2023-cu-boulder-atoc-forum
     date: 2023-01-04
     year: 2023
-    group: contributed
+    group: presentation
     type: Seminar
     title: TODO  # <- the talk's own title
     meeting: Atmospheric and Ocean Sciences Forum, University of Colorado Boulder
@@ -489,7 +515,7 @@ talks:
   - slug: 2023-scientific-machine-learning-symposium
     date: 2023-01-03
     year: 2023
-    group: contributed
+    group: presentation
     type: Poster
     title: TODO  # <- the talk's own title
     meeting: Scientific Machine Learning Symposium
@@ -500,7 +526,7 @@ talks:
   - slug: 2023-ecco-annual-meeting
     date: 2023-01-02
     year: 2023
-    group: contributed
+    group: presentation
     type: Conference presentation
     title: TODO  # <- the talk's own title
     meeting: ECCO Annual Meeting
@@ -511,7 +537,7 @@ talks:
   - slug: 2022-firo-workshop
     date: 2022-01-07
     year: 2022
-    group: contributed
+    group: presentation
     type: Poster
     title: TODO  # <- the talk's own title
     meeting: 9th Annual FIRO Workshop
@@ -522,7 +548,7 @@ talks:
   - slug: 2022-arctic-circulation-workshop
     date: 2022-01-06
     year: 2022
-    group: contributed
+    group: presentation
     type: Poster
     title: TODO  # <- the talk's own title
     meeting: Observing, Modeling, and Understanding the Circulation of the Arctic
@@ -534,7 +560,7 @@ talks:
   - slug: 2022-cw3e-annual-meeting
     date: 2022-01-05
     year: 2022
-    group: contributed
+    group: presentation
     type: Poster
     title: TODO  # <- the talk's own title
     meeting: Center for Western Weather and Water Extremes (CW3E) Annual Meeting
@@ -545,7 +571,7 @@ talks:
   - slug: 2022-ocean-salinity-conference
     date: 2022-01-04
     year: 2022
-    group: contributed
+    group: presentation
     type: Conference presentation
     title: TODO  # <- the talk's own title
     meeting: Ocean Salinity Conference
@@ -556,7 +582,7 @@ talks:
   - slug: 2022-ucsd-research-expo
     date: 2022-01-03
     year: 2022
-    group: contributed
+    group: presentation
     type: Poster
     title: TODO  # <- the talk's own title
     meeting: UCSD Jacobs School of Engineering Research Expo
@@ -567,7 +593,7 @@ talks:
   - slug: 2022-ocean-sciences-meeting
     date: 2022-01-02
     year: 2022
-    group: contributed
+    group: presentation
     type: Conference presentation
     title: TODO  # <- the talk's own title
     meeting: Ocean Sciences Meeting
@@ -578,7 +604,7 @@ talks:
   - slug: 2021-ams-101st-annual-meeting
     date: 2021-01-01
     year: 2021
-    group: contributed
+    group: presentation
     type: Conference presentation
     title: TODO  # <- the talk's own title
     meeting: American Meteorological Society 101st Annual Meeting
@@ -589,7 +615,7 @@ talks:
   - slug: 2020-international-atmospheric-rivers-conference
     date: 2020-01-02
     year: 2020
-    group: contributed
+    group: meeting
     type: Conference presentation
     title: TODO  # <- the talk's own title
     meeting: International Atmospheric Rivers Conference Sponsored Symposium
@@ -599,7 +625,7 @@ talks:
   - slug: 2020-ocean-sciences-meeting
     date: 2020-01-01
     year: 2020
-    group: contributed
+    group: meeting
     type: Conference presentation
     title: TODO  # <- the talk's own title
     meeting: Ocean Sciences Meeting
@@ -609,7 +635,7 @@ talks:
   - slug: 2016-ieee-ghtc
     date: 2016-01-01
     year: 2016
-    group: contributed
+    group: presentation
     type: Poster
     title: TODO  # <- the talk's own title
     meeting: Institute of Electrical and Electronics Engineers Global Humanitarian
@@ -620,32 +646,38 @@ talks:
 
 # -----------------------------------------------------------------------------
 teaching:
-  - slug: 2020-summer-climate-change-and-the-ocean
-    date: 2020-06-01
-    dates: Summer 2020 & 2021
-    title: Instructor, Climate Change and the Ocean
-    type: Pre-college course
-    org: University of California San Diego, Academic Connections
-    location: San Diego, CA
-    bullets:
-      - "Course: Climate Change and the Ocean."
-      - Developed and implemented a 4-week online pre-college course for high
-        school students, including research and communication skill-building
-        through accessing, plotting, analyzing, and presenting real-world
-        oceanographic data.
+  compact: true
+  entries:
+    - slug: 2020-summer-climate-change-and-the-ocean
+      date: 2020-06-01
+      dates: Summer 2020 & 2021
+      title: Instructor, Climate Change and the Ocean
+      summary: UC San Diego Academic Connections | 4-week online pre-college course;
+        students accessed, plotted, analyzed and presented real oceanographic data
+      type: Pre-college course
+      org: University of California San Diego, Academic Connections
+      location: San Diego, CA
+      bullets:
+        - "Course: Climate Change and the Ocean."
+        - Developed and implemented a 4-week online pre-college course for high
+          school students, including research and communication skill-building
+          through accessing, plotting, analyzing, and presenting real-world
+          oceanographic data.
 
-  - slug: 2018-fall-teaching-assistant-ucsd
-    date: 2018-09-01
-    dates: Sep. 2018–Dec. 2020
-    title: Teaching Assistant
-    type: Graduate and undergraduate courses
-    org: University of California San Diego
-    location: San Diego, CA
-    bullets:
-      - "Courses: introductory fluid mechanics (3 offerings), advanced fluid
-        mechanics (5 offerings), and material and energy balances (1 offering)."
-      - Led five hours of weekly discussion sessions with supplementary lectures
-        and problem-solving support.
+    - slug: 2018-fall-teaching-assistant-ucsd
+      date: 2018-09-01
+      dates: Sep. 2018–Dec. 2020
+      title: Teaching Assistant, Chemical Engineering
+      summary: UC San Diego | Fluid mechanics (8 offerings), material and energy
+        balances (1); 5 hrs/week of discussion sections
+      type: Graduate and undergraduate courses
+      org: University of California San Diego
+      location: San Diego, CA
+      bullets:
+        - "Courses: introductory fluid mechanics (3 offerings), advanced fluid
+          mechanics (5 offerings), and material and energy balances (1 offering)."
+        - Led five hours of weekly discussion sessions with supplementary lectures
+          and problem-solving support.
 
 # -----------------------------------------------------------------------------
 guest_lectures:
@@ -666,29 +698,47 @@ guest_lectures:
     location: San Diego, CA
 
 # -----------------------------------------------------------------------------
-service:
-  roles:
+# -----------------------------------------------------------------------------
+# Sections below use the compact one-line style (`compact: true`): each entry
+# renders as a single line, no sub-bullets. Set `compact: false` on any of them
+# to go back to bulleted entries.
+mentorship:
+  compact: true
+  entries:
+    - dates: Fall 2024–Spring 2025
+      who: Antonio Martinez Soares
+      role: Master's Student
+      org: Université catholique de Louvain
+    - dates: Summer 2021
+      who: Kayli Matsuyoshi
+      role: Undergraduate Student
+      org: Scripps Institution of Oceanography
+    - dates: Fall 2020–Spring 2021
+      who: Aniruddh Varadarajan
+      role: Undergraduate Student
+      org: University of California San Diego
+
+# -----------------------------------------------------------------------------
+leadership:
+  compact: true
+  entries:
     - dates: 2025–Present
-      title: Co-Lead
+      role: Co-Lead
       org: OASIS Working Group
-      bullets:
-        - Coordinate an international Antarctica InSync working group focused on
-          AI-enabled approaches relevant to Antarctic sea ice observing-system
-          design and recommendations.
-  items:
-    - label: ORCAS
-      text: Working Group Member.
+      note: International Antarctica InSync working group on AI-enabled approaches
+        to Antarctic sea ice observing-system design and recommendations
+
+# -----------------------------------------------------------------------------
+service:
+  compact: true
+  entries:
+    - dates: "2025"
+      role: Student Poster Judge
+      org: AMS Conference on Polar Meteorology and Oceanography
     - label: Peer Review
-      text: "Journal of Climate; Geophysical Research Letters; Journal of
-        Geophysical Research: Atmospheres; npj; Environmental Modelling &
-        Software; Open Science Europe."
-  mentorship:
-    - Antonio Martinez Soares, Master's Student, Université catholique de Louvain,
-      Fall 2024–Spring 2025.
-    - Kayli Matsuyoshi, Undergraduate Student, Scripps Institution of Oceanography,
-      Summer 2021.
-    - Aniruddh Varadarajan, Undergraduate Student, University of California San
-      Diego, Fall 2020–Spring 2021.
+      text: "Journal of Climate; Geophysical Research Letters; Journal of Geophysical
+        Research: Atmospheres; npj; Environmental Modelling & Software; Open Science
+        Europe."
 
 # -----------------------------------------------------------------------------
 honors:
@@ -708,7 +758,12 @@ honors:
 
 # -----------------------------------------------------------------------------
 activities:
-  - date: 2022-2025
+  - date: "2026"
+    text: Invited to roundtable on climate modelling with the UN Secretary-General's
+      Scientific Advisory Board.
+  - date: 2025–Present
+    text: ORCAS Working Group Member.
+  - date: 2022–2025
     text: MPOWIR Mentor Group.
   - date: Jan.–Dec. 2021
     text: URGE Pod Member, Unlearning Racism in the Geosciences.

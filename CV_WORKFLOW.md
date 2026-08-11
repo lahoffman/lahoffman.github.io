@@ -119,6 +119,53 @@ line entirely and it renders from `meeting:` permanently, with no warning.
 **Teaching** — `teaching:` holds courses, `guest_lectures:` holds one-off
 lectures. Both feed the `/teaching/` collection.
 
+**Talks split across sections** by their `group:` value, mapped near the top of
+the YAML:
+
+```yaml
+talk_sections:
+  invited_talks: invited
+  presentations: presentation
+  meetings_workshops: meeting
+```
+
+Change a talk's `group:` to move it between sections; add a line here (and to
+`section_order:`) to create a new one.
+
+## Compact sections
+
+Mentorship, leadership, service and teaching use a one-line-per-entry style:
+
+```yaml
+mentorship:
+  compact: true
+  entries:
+    - dates: Fall 2024–Spring 2025
+      who: Antonio Martinez Soares
+      role: Master's Student
+      org: Université catholique de Louvain
+```
+
+renders as `Fall 2024–Spring 2025 | Antonio Martinez Soares, Master's Student |
+Université catholique de Louvain`. The line is assembled from whichever of
+`who`, `role`, `org`, `note` and `text` are present, so you can use as few as
+you like. Set `compact: false` on a section to go back to bulleted entries.
+
+Teaching entries additionally take a `summary:` — the one-line version shown on
+the CV — while keeping their `bullets:` for the fuller `/teaching/` page.
+
+## Bold author name
+
+Your name is emboldened automatically in every publication author list. The
+default matches `Hoffman, L.` and `L. Hoffman`; override with:
+
+```yaml
+basics:
+  bold_name:
+    - Hoffman, L.
+    - L. Hoffman
+```
+
 ## Adding a brand-new section
 
 Two steps, both in `_data/cv_source.yml`:

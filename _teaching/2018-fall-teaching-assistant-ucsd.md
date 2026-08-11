@@ -1,5 +1,5 @@
 ---
-title: "Teaching Assistant"
+title: "Teaching Assistant, Chemical Engineering"
 collection: teaching
 type: "Graduate and undergraduate courses"
 permalink: /teaching/2018-fall-teaching-assistant-ucsd
