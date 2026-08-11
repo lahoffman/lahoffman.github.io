@@ -333,12 +333,23 @@ patents:
 # -----------------------------------------------------------------------------
 talks:
   # ---- Invited ----
+  - slug: 2025-ecr-igac-icacgp
+    date: 2025-01-01
+    year: 2025
+    group: invited
+    type: Invited talk
+    title: Introduction to Machine Learning for Earth and Climate Scientists
+    meeting: International Global Atmospheric Chemistry (IGAC) Early Career Researchers Online Conference
+    venue: 
+    location: Virtual
+    format: Oral presentation
+
   - slug: 2025-esip-machine-learning-cluster
     date: 2025-01-01
     year: 2025
     group: invited
     type: Invited talk
-    title: TODO  # <- the talk's own title
+    title: Machine learning is a useful tool to predict and understand sea ice motion in the Arctiic.
     meeting: Earth Science Information Partners (ESIP) Machine Learning Cluster Meeting
     venue: Earth Science Information Partners
     location: Virtual
@@ -349,7 +360,7 @@ talks:
     year: 2024
     group: invited
     type: Invited talk
-    title: TODO  # <- the talk's own title
+    title: Machine learning is a useful tool to predict and understand sea-ice motion in the Arctic.
     meeting: "Interagency Arctic Research Policy Committee (IARPC) Modelers'
       Community of Practice March 2024 Meeting – Combining Modeling and Machine
       Learning Approaches to Understanding the Arctic Earth System"
@@ -362,7 +373,7 @@ talks:
     year: 2023
     group: invited
     type: Invited talk
-    title: TODO  # <- the talk's own title
+    title: Machine learning is a useful tool to predict and understand sea-ice motion in the Arctic.
     meeting: AI for the Study of Environmental Risk (AI4ER) Seminar Series,
       University of Cambridge
     venue: University of Cambridge
@@ -373,7 +384,7 @@ talks:
     year: 2022
     group: invited
     type: Invited talk
-    title: TODO  # <- the talk's own title
+    title: Machine Learning for Evaluating the Drivers of Variability in Arctic Sea-Ice Dynamics to Improve Forecasting.
     meeting: American Meteorological Society Collective Madison Meeting, 17th
       Conference on Polar Meteorology and Oceanography
     venue: American Meteorological Society
@@ -385,7 +396,7 @@ talks:
     year: 2022
     group: invited
     type: Invited talk
-    title: TODO  # <- the talk's own title
+    title: Ocean surface salinity response to atmospheric river (AR) events in the California Current System.
     meeting: NOAA Science Seminar Series
     venue: National Oceanic and Atmospheric Administration
     location: Virtual
@@ -417,7 +428,7 @@ talks:
     year: 2025
     group: presentation
     type: Conference presentation
-    title: TODO  # <- the talk's own title
+    title: AI4InSync - Optimizing Southern Ocean Observing Systems using AI.
     meeting: Kavli Institute for Theoretical Physics (KITP), The Physics of Changing
       Polar Climate
     venue: Kavli Institute for Theoretical Physics
@@ -429,7 +440,7 @@ talks:
     year: 2025
     group: presentation
     type: Conference presentation
-    title: TODO  # <- the talk's own title
+    title: Probabilistic Forecasts of Interannual Arctic Sea Ice Extent with Data-Driven Statistical Models.
     meeting: American Meteorological Society Denver Summit, 18th Conference on Polar
       Meteorology and Oceanography
     venue: American Meteorological Society
@@ -452,7 +463,7 @@ talks:
     year: 2024
     group: presentation
     type: Conference presentation
-    title: TODO  # <- the talk's own title
+    title: Freshwater Processes in the Upper Ocean.
     meeting: Physical Oceanography Dissertation Symposium (PODS)
     venue: Physical Oceanography Dissertation Symposium
     location: Lihue, HI
@@ -485,7 +496,7 @@ talks:
     date: 2023-01-07
     year: 2023
     group: meeting
-    type: Conference presentation
+    type: 
     title: TODO  # <- the talk's own title
     meeting: Mentoring Physical Oceanography Women+ to Increase Retention (MPOWIR)
       Pattullo Conference
@@ -508,18 +519,29 @@ talks:
     date: 2023-01-05
     year: 2023
     group: meeting
-    type: Conference presentation
+    type: 
     title: TODO  # <- the talk's own title
     meeting: SeaSAR 2023
     venue: European Space Agency SeaSAR
     location: Svalbard, Norway
+
+  - slug: 2023-ncar
+    date: 2023-01-04
+    year: 2023
+    group: presentation
+    type: Meeting
+    title: Machine learning is a useful tool to predict and understand sea-ice motion in the Arctic.
+    meeting: NCAR Sea Ice Modeling Group Meeting
+    venue: NCAR
+    location: Boulder, CO
+    format: Seminar
 
   - slug: 2023-cu-boulder-atoc-forum
     date: 2023-01-04
     year: 2023
     group: presentation
     type: Seminar
-    title: TODO  # <- the talk's own title
+    title: Machine learning is a useful tool to predict and understand sea-ice motion in the Arctic.
     meeting: Atmospheric and Ocean Sciences Forum, University of Colorado Boulder
     venue: University of Colorado Boulder
     location: Boulder, CO
@@ -530,7 +552,7 @@ talks:
     year: 2023
     group: presentation
     type: Poster
-    title: TODO  # <- the talk's own title
+    title: Machine learning is a useful tool to predict and understand sea-ice motion in the Arctic.
     meeting: Scientific Machine Learning Symposium
     venue: Scientific Machine Learning Symposium
     location: San Diego, CA
@@ -541,7 +563,7 @@ talks:
     year: 2023
     group: presentation
     type: Conference presentation
-    title: TODO  # <- the talk's own title
+    title: Machine learning is a useful surrogate model to parameterize and understand sea-ice motion in the Arctic. 
     meeting: ECCO Annual Meeting
     venue: Estimating the Circulation and Climate of the Ocean (ECCO)
     location: Pasadena, CA
@@ -586,7 +608,7 @@ talks:
     year: 2022
     group: presentation
     type: Conference presentation
-    title: TODO  # <- the talk's own title
+    title: Ocean surface salinity response to atmospheric river (AR) events in the California Current System
     meeting: Ocean Salinity Conference
     venue: Ocean Salinity Conference
     location: New York, NY
@@ -597,7 +619,7 @@ talks:
     year: 2022
     group: presentation
     type: Poster
-    title: TODO  # <- the talk's own title
+    title: Machine learning is a useful tool to predict and understand sea-ice dynamics in the Arctic.
     meeting: UCSD Jacobs School of Engineering Research Expo
     venue: UC San Diego Jacobs School of Engineering
     location: San Diego, CA
@@ -608,7 +630,7 @@ talks:
     year: 2022
     group: presentation
     type: Conference presentation
-    title: TODO  # <- the talk's own title
+    title: Machine Learning for Evaluating the Drivers of Variability in Arctic Sea-Ice Dynamics to Improve Forecasting
     meeting: Ocean Sciences Meeting
     venue: Ocean Sciences Meeting
     location: Virtual
@@ -619,7 +641,7 @@ talks:
     year: 2021
     group: presentation
     type: Conference presentation
-    title: TODO  # <- the talk's own title
+    title: Ocean surface salinity response to atmospheric river events in the California Current System.
     meeting: American Meteorological Society 101st Annual Meeting
     venue: American Meteorological Society
     location: Virtual
