@@ -69,7 +69,7 @@ Teaching and Mentoring
 * 2023: **Guest Lecturer**; Introduction to Machine Learning for Earth and Climate Science; Analysis of Physical Oceanographic Data; Scripps Institution of Oceanography
 * 2024–2025: **Co-Mentor**; Antonio Martinez Soares, Master's Student; Université catholique de Louvain
 * 2021: **Co-Mentor**; Kayli Matsuyoshi, Undergraduate Student; Scripps Institution of Oceanography
-* 2020–2021: **Co-Mentor**; Aniruddh Varadarajan, Undergraduate Student; University of California San Diego
+* 2020–2021: **Co-Mentor**; Aniruddh Varadarajan, Undergraduate Student; UC San Diego
 
 Leadership and Professional Service
 ======
